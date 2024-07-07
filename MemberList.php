@@ -12,7 +12,7 @@
       $conn->query($sql);
       header("location:MemberList.php");
       exit();
-    endif;
+    endif;  
 
     if(isset($_GET['deleteUser']) and isset($_GET['userId'])) : 
       $userId = $_GET['userId'];
