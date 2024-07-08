@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
   session_start();
-  $email=$_SESSION['email'];
+  $email=$_SESSION['user']['email'];
   include("dbconnect.php");
 
   $sql="SELECT * from services";
