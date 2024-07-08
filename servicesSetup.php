@@ -15,7 +15,7 @@
   <!-- php for insert, update and delete -->
   <?php 
     include('dbconnect.php');
-  // defining of the values
+    // defining of the values
     if(isset($_POST['btnSubmit']))
     {
       $title=$_POST['title'];

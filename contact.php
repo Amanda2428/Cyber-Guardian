@@ -28,8 +28,88 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
+  <?php 
+    include('dbconnect.php');
+    // defining of the values
+    if(isset($_POST['btnSubmit']))
+    {
+      $message=$_POST['message'];
+      $email=$_POST['email'];
+
+    // Insert Query
+      $sql="INSERT INTO contactus (message, email) VALUES ('$message', '$email')";
+      if ($conn->query($sql) === TRUE) {
+        header("location:contactList.php");
+      } else {
+        echo "Error: " . $conn->error;
+      }
+    }
+    // Showing of text for inserted data
+    if (isset($_POST['btnUpdate'])) {
+      $id = $conn->real_escape_string($_POST['id']);
+      $message = $conn->real_escape_string($_POST['message']);
+      $email = $conn->real_escape_string($_POST['email']);
+      $sql = "UPDATE contactus SET message='$message', email='$email' WHERE id='$id'";
+
+    
+      if ($conn->query($sql) === TRUE) {
+        header("location:contactList.php");
+      } else {
+        echo "Error: " . $conn->error;
+      }
+    }
+    // Delete Query
+    if(isset($_GET['deleteid'])){
+      $did=$_GET['deleteid'];
+      $sql="DELETE from contactus where id='$did'";
+      if($conn->query($sql)==True){
+          echo"<div> Delete One Record Successfully</div>";
+          header("location:contactList.php");
+      }
+    }
+    // Edit Query
+    if (isset($_GET['editid'])) {
+      $eid = $_GET['editid'];
+      $sql = "SELECT * FROM contactus WHERE id='$eid'";
+      $result = $conn->query($sql);
+      $row = $result->fetch_assoc();
+    } 
+    else {
+      $sql = "SELECT * FROM contactus";
+      $result = $conn->query($sql);
+    }
+
+  ?>
   <body>
-  <nav class="navbar navbar-expand-lg ">
+  <nav>
+      <ul>
+        <li class="link"><a href="home.php">Home</a></li>
+        <li class="link"><a href="information.php">Information</a></li>
+        <li>
+          Campaigns
+          <ul>
+            <li class="link">
+              <a href="popular-apps.php">Popular Apps</a>
+            </li>
+            <li class="link">
+              <a href="parents-help.php">Parents Help</a>
+            </li>
+            <li class="link">
+              <a href="livestreaming.php">Livestreaming</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="link"><a href="contact.php">Contact</a></li>
+        <li class="link"><a href="legislation.php">Legislation</a></li>
+        <li class="link"><a href="logout.php">Logout</a></li>
+      </ul>
+      <form action="/search" method="get" class="search-input">
+        <input type="text" id="search" name="search" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+    <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand  " href="#">
         <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
         </a>
@@ -59,7 +139,7 @@
           <li class="nav-item">
             <a class="link " href="MemberList.php">MemberList</a>
           </li>
-          <div class="search  ms-auto d-flex  align-items-center">
+          <div class="search ml-20px d-flex  align-items-center">
             <form class="form-inline my-2 my-lg-0 d-flex flex-row gap-3 ">
             <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -72,33 +152,39 @@
       </div>
     </nav>
     <header>
-      <h1>Online Safety Campaign</h1>
-      <!-- Custom Cursors and 3D Illustrations can be added here -->
+    <h1 class="mt-3"><strong>Help/Support</strong></h1>
+    <!-- Custom Cursors and 3D Illustrations can be added here -->
     </header>
 
     <main>
-      <section id="contact">
+      <section id="contact" class="shadow back-color">
         <h2>Contact Us</h2>
         <p>
           Feel free to reach out to us using the contact form below. We
           appreciate your feedback and inquiries.
         </p>
-
         <!-- Contact Form -->
-        <form action="#" method="post">
-    
-          <label for="message">Message:</label>
-          <textarea id="message" rows="4" name="msg" required></textarea>
+        <form action="#" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
+            <label for="title">Message:</label>
+            <textarea name="message" id="message" required><?php echo isset($row['message']) ? $row['message'] : ''; ?></textarea>
+      
+            <label for="">Description:</label>
+            <input type="email" id="email" name="email" value="<?php echo isset($row['email'])? $row['email']:"";?>"required />
 
-          <button type="submit" name="btnMsg">Send Message</button>
-        </form>
-
+   
+            <?php if(isset($_GET['editid'])) { ?>
+              <button type="submit" name="btnUpdate">Update</button>
+            <?php } else { ?>
+              <button type="submit" name="btnSubmit">Create Post</button>
+            <?php } ?>
+        </form>      
         <!-- Privacy Policy Link -->
         <p>
           Before sending a message, please review our
           <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
         </p>
-      </section>
+      <section>
     </main>
 
     <footer>
@@ -111,5 +197,9 @@
         <a href="#" style="color: white; margin-left: 10px">Instagram</a>
       </div>
     </footer>
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
   </body>
 </html>
