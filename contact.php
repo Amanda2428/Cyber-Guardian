@@ -146,7 +146,7 @@
           </form>
           </div>
           <li class="nav-item ms-auto">
-            <a class="link " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
           </li>
         </ul>
       </div>

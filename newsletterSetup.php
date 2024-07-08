@@ -112,8 +112,10 @@
       <li class="nav-item">
         <a class="link " href="MemberList.php">MemberList</a>
       </li>
-      <li class="nav-item ms-auto">
-        <a class="link " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+      <li class="nav-item ms-auto ">
+        <div class="logout">
+          <a class="link " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
