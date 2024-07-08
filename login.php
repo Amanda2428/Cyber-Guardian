@@ -18,7 +18,7 @@
     </nav>
     <header>
       <h1>Online Safety Campaign</h1>
-      <!-- Custom Cursors and 3D Illustrations can be added here -->
+      
     </header>
 
     <main>
@@ -38,7 +38,7 @@
         </form>
         <br>
          Not a member register <a href="registration.php"> here </a>
-        <!-- Privacy Policy Link -->
+        
         <p>
           Before sending a message, please review our
           <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
