@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+require_once("dbconnect.php");
+session_start();
+$wrongPassword = false;
+$invalidCredentials = false;
 
+if(isset($_POST['btnLogin'])) : 
+  $email = $_POST['email'];
+  $sql = "SELECT * FROM member WHERE email = '$email'";
+  
+  try {
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    if(isset($row) and $row['password'] == $_POST['password']) : 
+      $_SESSION['user'] = $row;
+      if($row['usertype'] == 1) : 
+        header("location:adminhome.php");
+        exit();
+      else : 
+        header("location:home.php");
+        exit();
+      endif;
+    else : 
+      $wrongPassword = true;
+    endif;
+  } catch (Exception $err) {
+    $invalidCredentials = true;
+  }
+endif;
+
+?>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +63,8 @@
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required />
-
-        <button type="submit">Login</button>
+        <?= ($wrongPassword or $invalidCredentials) ? '<span class="text-danger">Invalid Credentials</span>' : "" ?>
+        <button type="submit" name="btnLogin">Login</button>
       </form>
       <br>
       Not a member register <a href="registration.php"> here </a>
