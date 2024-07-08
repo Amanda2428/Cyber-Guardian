@@ -82,7 +82,7 @@
 
   ?>
   <body>
-    <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand  " href="#">
     <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
     </a>
@@ -112,16 +112,21 @@
       <li class="nav-item">
         <a class="link " href="MemberList.php">MemberList</a>
       </li>
-      <li class="nav-item ms-auto ">
-        <div class="logout">
-          <a class="link " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
-        </div>
+      <li class="nav-item">
+    
       </li>
+      
     </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
+    <div class="logout ">
+    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+    
+    
+    <!-- <form class="form-inline my-2  d-flex flex-row gap-3 mr-20 w-35 form-responsive">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
+    </form>
+    -->
   </div>
 </nav>
     <header>

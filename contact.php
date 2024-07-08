@@ -81,76 +81,54 @@
 
   ?>
   <body>
-  <nav>
-      <ul>
-        <li class="link"><a href="home.php">Home</a></li>
-        <li class="link"><a href="information.php">Information</a></li>
-        <li>
-          Campaigns
-          <ul>
-            <li class="link">
-              <a href="popular-apps.php">Popular Apps</a>
-            </li>
-            <li class="link">
-              <a href="parents-help.php">Parents Help</a>
-            </li>
-            <li class="link">
-              <a href="livestreaming.php">Livestreaming</a>
-            </li>
-          </ul>
-        </li>
 
-        <li class="link"><a href="contact.php">Contact</a></li>
-        <li class="link"><a href="legislation.php">Legislation</a></li>
-        <li class="link"><a href="logout.php">Logout</a></li>
-      </ul>
-      <form action="/search" method="get" class="search-input">
-        <input type="text" id="search" name="search" placeholder="Search..." />
-        <button type="submit">Search</button>
-      </form>
-    </nav>
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand  " href="#">
-        <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item  ">
-            <a class="link " href="adminhome.php">Home <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="servicesSetup.php">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="newsletterSetup.php">NewsLetter</a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="howparenthelpSetup.php">HowParentHelp</a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="socialmediaappSetup.php">SocialMediaApps</a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="contactList.php">Help/Support</a>
-          </li>
-          <li class="nav-item">
-            <a class="link " href="MemberList.php">MemberList</a>
-          </li>
-          <div class="search ml-20px d-flex  align-items-center">
-            <form class="form-inline my-2 my-lg-0 d-flex flex-row gap-3 ">
-            <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-          </div>
-          <li class="nav-item ms-auto">
-            <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
-          </li>
+    <a class="navbar-brand  " href="#">
+    <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item  ">
+        <a class="link " href="home.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="link " href="information.php">Information</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="link data-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="popular-apps.php">Popular-app</a></li>
+          <li><a class="dropdown-item" href="parents-help.php">Parents Help</a></li>
+          <li><a class="dropdown-item" href="livestreaming.php">Livestreaming</a></li>
         </ul>
-      </div>
-    </nav>
+      </li>
+      
+      <li class="nav-item">
+        <a class="link " href="contact.php">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="link " href="legislation.php">Legislation</a>
+      </li>
+      <li class="nav-item">
+        <a class="link " href="contactList.php">Help/Support</a>
+      </li>
+
+    </ul>
+    <div class="logout ">
+    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+    
+    
+    <form class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+   
+  </div>
+</nav>
     <header>
     <h1 class="mt-3"><strong>Help/Support</strong></h1>
     <!-- Custom Cursors and 3D Illustrations can be added here -->
