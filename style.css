@@ -147,6 +147,7 @@
     margin-right: 20px;
   }
 
+  
   .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0px; 
@@ -365,6 +366,14 @@
 
 .portfolio-info:hover {
     background-color: white;
+}
+.btn-outline-success{
+  background-color: #198754;
+
+  color: white;
+}
+.btn-outline-success:hover{
+  background-color: #0E5640;
 }
 
   footer {
