@@ -107,11 +107,22 @@
     display: flex;
     gap: 20px;
     font-size: 23px;
-    margin-right: 100px;
+    margin-right: 20px;
     text-decoration: none;
     color: black;
   }
   .logout a:hover{
+    color: green;
+  }
+  .login a{
+    display: flex;
+    gap: 20px;
+    font-size: 23px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .login a:hover{
     color: green;
   }
 
@@ -463,4 +474,5 @@
     justify-content: flex-start;
     }
 }
+
 

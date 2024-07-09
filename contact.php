@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 
-<?php 
-  session_start();
-  $email=$_SESSION['email'];
-  include("dbconnect.php");
-  if(isset($_POST['btnMsg']))
-  {
-     $msg=$_POST['msg'];
-     $sql=" INSERT INTO contactus (message,email) VALUES ('$msg','$email') ";
-     if($conn->query($sql))
-     {
-      echo " Send Message successfully";
-      header("location:contact.php");
-     }
-  }
 
-?>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,53 +16,22 @@
   <?php 
     include('dbconnect.php');
     // defining of the values
+    session_start();
     if(isset($_POST['btnSubmit']))
     {
       $message=$_POST['message'];
-      $email=$_POST['email'];
+      $email=$_SESSION['email'];
 
-    // Insert Query
-      $sql="INSERT INTO contactus (message, email) VALUES ('$message', '$email')";
-      if ($conn->query($sql) === TRUE) {
-        header("location:contactList.php");
-      } else {
-        echo "Error: " . $conn->error;
-      }
+   // Insert Query
+   $sql="INSERT INTO contactus (message, email) VALUES ('$message', '$email')";
+   if ($conn->query($sql) === TRUE) {
+     $status = "success";
+   } else {
+     $status = "error";
+   }
     }
-    // Showing of text for inserted data
-    if (isset($_POST['btnUpdate'])) {
-      $id = $conn->real_escape_string($_POST['id']);
-      $message = $conn->real_escape_string($_POST['message']);
-      $email = $conn->real_escape_string($_POST['email']);
-      $sql = "UPDATE contactus SET message='$message', email='$email' WHERE id='$id'";
-
     
-      if ($conn->query($sql) === TRUE) {
-        header("location:contactList.php");
-      } else {
-        echo "Error: " . $conn->error;
-      }
-    }
-    // Delete Query
-    if(isset($_GET['deleteid'])){
-      $did=$_GET['deleteid'];
-      $sql="DELETE from contactus where id='$did'";
-      if($conn->query($sql)==True){
-          echo"<div> Delete One Record Successfully</div>";
-          header("location:contactList.php");
-      }
-    }
-    // Edit Query
-    if (isset($_GET['editid'])) {
-      $eid = $_GET['editid'];
-      $sql = "SELECT * FROM contactus WHERE id='$eid'";
-      $result = $conn->query($sql);
-      $row = $result->fetch_assoc();
-    } 
-    else {
-      $sql = "SELECT * FROM contactus";
-      $result = $conn->query($sql);
-    }
+    
 
   ?>
   <body>
@@ -98,7 +52,7 @@
         <a class="link " href="information.php">Information</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="link data-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <a class="link data-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Campaigns</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="popular-apps.php">Popular-app</a></li>
           <li><a class="dropdown-item" href="parents-help.php">Parents Help</a></li>
@@ -112,9 +66,6 @@
       <li class="nav-item">
         <a class="link " href="legislation.php">Legislation</a>
       </li>
-      <li class="nav-item">
-        <a class="link " href="contactList.php">Help/Support</a>
-      </li>
 
     </ul>
     <div class="logout ">
@@ -122,10 +73,10 @@
     </div>
     
     
-    <form class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
+    <!-- <form class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
    
   </div>
 </nav>
@@ -142,20 +93,13 @@
           appreciate your feedback and inquiries.
         </p>
         <!-- Contact Form -->
-        <form action="#" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
+        <form action="" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="status"   required>
             <label for="title">Message:</label>
-            <textarea name="message" id="message" required><?php echo isset($row['message']) ? $row['message'] : ''; ?></textarea>
+            <textarea name="message" id="message" required></textarea>
       
-            <label for="">Description:</label>
-            <input type="email" id="email" name="email" value="<?php echo isset($row['email'])? $row['email']:"";?>"required />
-
-   
-            <?php if(isset($_GET['editid'])) { ?>
-              <button type="submit" name="btnUpdate">Update</button>
-            <?php } else { ?>
-              <button type="submit" name="btnSubmit">Create Post</button>
-            <?php } ?>
+            <button type="submit" name="btnSubmit" onclick="alertbox()">Send Message</button>
+        
         </form>      
         <!-- Privacy Policy Link -->
         <p>
@@ -179,5 +123,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
+   <script>
+    function alertbox() {
+    var message = document.getElementById('message').value.trim();
+    if (message === '') {
+      alert('Please enter a message.');
+    } else {
+      alert('Click confirm to submit your message!');
+      // Optionally, you can submit the form here if needed
+      // document.querySelector('form').submit();
+    }
+  }
+   </script>
+
   </body>
 </html>

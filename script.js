@@ -10,3 +10,5 @@ function handleMediaQueryChange(e) {
   const mediaQuery = window.matchMedia('(max-width: 768px)');
   mediaQuery.addListener(handleMediaQueryChange);
   handleMediaQueryChange(mediaQuery); // Initial check  
+
+

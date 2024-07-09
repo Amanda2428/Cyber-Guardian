@@ -55,14 +55,15 @@
       
     </ul>
     <div class="logout ">
-    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+    <a class="link" href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
     
     
-    <form class="form-inline my-2  d-flex flex-row gap-3 mr-20 w-35 form-responsive">
+    <form class="form-inline my-2 d-flex flex-row gap-3  w-100 form-responsive">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    
    
   </div>
 </nav>
@@ -71,44 +72,40 @@
     <!-- Custom Cursors and 3D Illustrations can be added here -->
     </header>
 
-    <main>
-      <section id="contact">
-      <?php 
-          if($result->num_rows>0)
-          {
-        ?>
-        <h2>Help/Support List</h2>
-        <table border="1" cellspacing="5" cellpadding="5px">
-          <tr>
-            <th>Id</th>
-            <th>Message</th>
-            <th>Email</th>
-            <th>Date</th>
-          </tr>
-           <?php 
-            while($row=$result->fetch_assoc())
-           {
-           ?>
 
-          <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['message']; ?></td>
-            <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['sentdate']; ?></td>
-            
-          </tr>
-          <?php 
-           }
-           ?>
-        </table>
-        <?php 
-          }
-          else{
-            echo " There is no data";
-          }
-        ?>
-       
+    <main>
+       <!-- Table Start -->
+       <section id="newsletters rad" >
+        <div class="container table-responsive ">
+          <?php
+          if($result->num_rows > 0 ) {
+          ?>
+            <table class="table table-hover  table-info  overflow-hidden rounded align-items-center">
+              <tr class="">
+                <th scope="col">ID</th>
+                <th scope="col">Message</th>
+                <th scope="col">Email</th>
+                <th scope="col">Sented Date</th>
+              </tr>
+              <?php
+                while($row = $result->fetch_assoc()) {
+              ?>
+                <tr>
+                  <td class="responsive-text"><?php echo $row['id']; ?></td>
+                  <td class="responsive-text"><?php echo $row['message']?></td>
+                  <td class="responsive-text "><?php echo $row['email']?></td>
+                  <td class="responsive-text"> <?php echo $row['sentdate']; ?></td>
+                </tr>
+              <?php
+                }
+              ?>
+            </table>
+            <?php
+              }
+            ?>
+        </div>
       </section>
+      <!-- Table End -->
     </main>
 
     <footer>
