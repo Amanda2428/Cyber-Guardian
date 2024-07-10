@@ -2,7 +2,7 @@
 
 <?php 
   session_start();
-  $email=$_SESSION['email'];
+  $email=$_SESSION['user']['email'];
   include("dbconnect.php");
 
   $sql1="SELECT * from socialmediaapps";
@@ -57,12 +57,13 @@
     <div class="logout ">
     <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
-    
-    
     <form class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <div class="profile">
+      <img class="wh"src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />
+    </div> 
    
   </div>
 </nav>

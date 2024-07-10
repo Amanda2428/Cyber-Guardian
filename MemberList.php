@@ -86,10 +86,17 @@
       <h1 class="mt-3"><strong>Member List </strong></h1>
       <!-- Custom Cursors and 3D Illustrations can be added here -->
     </header>
-
+    <div class="searching container d-flex flex-column align-items-center  ">
+        <form class="form-inline my-2  d-flex flex-row gap-3 mr-20  form-responsive">
+          <input class="form-control mr-sm-2 w-100 " type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <p>Empowering teenagers to navigate the digital world safely.</p>
+    </div>
     <main>
       <!-- Table Start -->
       <section id="newsletters rad" >
+        
         <div class="container table-responsive ">
           <?php
           if($result->num_rows > 0 ) {
@@ -116,7 +123,7 @@
             <td><?php echo $row['city']; ?></td>
             <td><?php echo $row['subscription']==1? "Yes":"No"; ?></td>
             <td><?php echo $row['usertype']==1? "Admin":"User"; ?></td>
-            <td class="action h-100">
+            <td class="promote h-100">
                 <?php if($row['usertype'] == 1) : ?>
                 <a href="MemberList.php?changeRole=1&userId=<?= $row['id'] ?>&roleToChange=0 " class="btn btn-primary btn-sm mt-1 mb-2  w-100">Demote to User</a>
                 <?php else : ?>

@@ -1,5 +1,17 @@
 <!DOCTYPE html>
-<?php 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Safety Campaign</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <?php 
   session_start();
   $email=$_SESSION['user']['email'];
   include("dbconnect.php");
@@ -30,19 +42,8 @@
   }
 }
 ?>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Safety Campaign</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
-  </head>
   <body>
+
   <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand  " href="#">
     <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
@@ -84,7 +85,10 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-   
+    <div class="profile">
+      <img class="wh"src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />
+    </div> 
+  
   </div>
 </nav>
     <header>
@@ -195,7 +199,8 @@
     </main>
 
     <footer>
-      <p>You are here: Home: <?php echo $email; ?></p>
+      <p>You are here at Home: </p>
+      <p>Login with <?php echo $email; ?></p>
       <div class="footer-content">
         <p>&copy; 2024 Online Safety Campaign</p>
         <!-- Add social media buttons with relevant links -->

@@ -14,6 +14,8 @@
 
   <!-- php for insert, update and delete -->
   <?php 
+    session_start();
+    $email=$_SESSION['user']['email'];
     include('dbconnect.php');
     // defining of the values
     if(isset($_POST['btnSubmit']))
@@ -78,7 +80,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ">
       <li class="nav-item  ">
-        <a class="link " href="adminhome.php">Home <span class="sr-only"></span></a>
+        <a class="link active" href="adminhome.php">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="link " href="servicesSetup.php">Services</a>
@@ -97,22 +99,15 @@
       </li>
       <li class="nav-item">
         <a class="link " href="MemberList.php">MemberList</a>
-      </li>
-      <li class="nav-item">
-    
-      </li>
-      
+      </li>    
     </ul>
     <div class="logout ">
     <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
-    
-    
-    <!-- <form class="form-inline my-2 my-lg-0 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    -->
+    <div class="profile">
+      <img class="wh"src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />
+    </div> 
+
   </div>
 </nav>
   <header>

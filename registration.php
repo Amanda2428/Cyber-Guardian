@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-
+session_start();
 include("dbconnect.php");
 if(isset($_POST['btnReg']))
 {
@@ -9,16 +9,25 @@ if(isset($_POST['btnReg']))
    $password=$_POST['password'];
    $city=$_POST['city'];
    $sub=$_POST['sub'];
+   
 
-   $sql="INSERT INTO member (name,email,password,city,subscription,usertype) VALUES ('$name','$email','$password','$city','$sub',0) ";
-
-   if($conn->query($sql))
+   if(isset($_FILES["nimg"])&& $_FILES["nimg"]["error"]==0)
    {
-    session_start();
-    $_SESSION['email'] =$email;
-     header("location:home.php");
+       //Read file name
+       $Filename=$_FILES["nimg"]["name"];
+       //Read file path
+       $Filepath=$_FILES["nimg"]["tmp_name"];
    }
 
+   $sql="INSERT INTO member (name,email,password,city,subscription,profileImg,usertype) VALUES ('$name','$email','$password','$city','$sub','$Filename',0) ";
+   if($conn->query($sql)==TRUE)
+      {
+        echo " Registration successfully ";
+        move_uploaded_file($Filepath, "images/". $Filename);
+        $_SESSION['user'] = ["name" => $name, "email" => $email,"password" => $password, "city" => $city, "sub"=> $sub, "profileImg"=> $Filename];
+        header("location:home.php");
+        exit();
+      }
 
 }
 
@@ -87,21 +96,24 @@ if(isset($_POST['btnReg']))
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required />
 
-              <label for="name">Password:</label>
-              <input type="password" id="name" name="password" required />
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
 
-              <label for="name">City:</label>
-              <input type="text" id="name" name="city" required />
+              <label for="city">City:</label>
+              <input type="city" id="city" name="city" required />
+
+              <label for="image" class="form-label">Image:</label>
+              <input class="form-control" type="file" id="image" name="nimg" <?php echo isset($row['profileImg']) ? '' : 'required'; ?> />
 
               <div class="radio d-flex align-items-center justify-content-center gap-5 mt-2">
                 <label for="Radio">Newsletter Subscription:</label>
                 <div class="form-check form-check-inline ">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Yes</label>
+                  <input class="form-check-input" type="radio" name="sub" id="Radio" value="option1">
+                  <label class="form-check-label" for="sub">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">No</label>
+                  <input class="form-check-input" type="radio" name="sub" id="Radio" value="option2">
+                  <label class="form-check-label" for="sub">No</label>
                 </div>
               </div>
               

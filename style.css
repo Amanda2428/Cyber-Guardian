@@ -190,6 +190,18 @@
   height: 30px;
 }
 
+.promote{
+  width: 150px;
+  height: 30px;
+}
+
+.searching{
+  /* background-color: white; */
+  padding: 20px;
+  width: 100%;
+  border-radius: 50px;
+}
+
 .parteners span {
     margin-bottom: 20px;
 }
@@ -242,6 +254,11 @@
     margin-bottom: 20px;
     padding: 20px;
 
+  }
+  .wh {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
   }
 .back-color{
   background-color: #DFF4EF  ;
