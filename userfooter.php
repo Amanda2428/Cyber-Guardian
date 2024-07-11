@@ -72,7 +72,7 @@
                     <p>&copy; 2024 <strong>Cyber Guradian</strong></p>
                 </div>
             </div>
-        <div class="col text-end">
+        <div class="col text-end d-flex flex-column">
             <div class="p-3 ">
                 <a href="#" class="social-1"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#" class="social-1"><i class="fa-brands fa-facebook"></i></a>
