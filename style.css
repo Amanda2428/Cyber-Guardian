@@ -31,11 +31,12 @@
   }
 
   nav {
-    
+    position: relative;
     box-sizing: border-box !important;
     width: 100% !important;
     display: flex !important;
-    background-color: rgba(255, 254, 254, 0.365) !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    /* background-color: rgb(49, 59, 70)!important; */
     align-items: center !important;
     padding: 10px !important;
     border-bottom: 1px solid gray !important;
@@ -61,9 +62,7 @@
     font-size: 20px;
     color: black;
   }
-.hi{
-  gap: 20px;
-}
+
 
   
   nav li a {
@@ -89,6 +88,7 @@
     visibility: visible !important;
     transform: scaleX(1) !important;
   }
+
   
   .navbar-brand {
     opacity: 0.8;
@@ -194,7 +194,9 @@
   width: 150px;
   height: 30px;
 }
-
+.table-dark{
+  --bs-table-bg: rgb(49, 59, 70);
+}
 .searching{
   /* background-color: white; */
   padding: 20px;
@@ -394,23 +396,24 @@
 }
 
   footer {
-    margin-top: 20px;
-    background-color:rgb(49,59,70);;
+    background-color: rgba(62, 60, 60, 0.628);
+    
     color: white;
     text-align: center;
     padding: 10px;
-    /* position: fixed; */
     bottom: 0;
-    /* width: 100%;
-    display: flex;
-    flex-direction: column; */
   }
 
   .footer-content {
     flex: 1;
   }
+  .copyright{
+    background-color: black;
+    background-color: rgb(5, 68, 57) ;
+    
+  }
 
-  /* Add additional styles for specific elements as needed */
+
 
   /* Responsive Styles */
   @media only screen and (max-width: 600px) {
@@ -500,5 +503,44 @@
     justify-content: flex-start;
     }
 }
+.ssscia-news ul li {
+  padding: 10px;
+  list-style-type: none;
+  color: white;
+}
+
+.ssscia-news a {
+  text-decoration: none;
+  color: white;
+}
+
+.ssscia-news a:hover {
+  color: greenyellow;
+}
+.copyright {
+  color: white;
+  font-size: 15px;
+}
+
+.copyright img {
+  width: 60px;
+  height: 50px;
+}
+.social-1 {
+  padding: 8px 10px;
+  color: greenyellow;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-left: 50px;
+  background-color: black;
+
+}
+.copyright .col{
+  gap: 30px;
+}
+
+
 
 

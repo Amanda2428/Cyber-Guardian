@@ -14,6 +14,8 @@
   <!-- php for insert, update and delete --->
   <?php 
     include('dbconnect.php');
+    session_start();
+    $email=$_SESSION['user']['email'];
   // defining of the values
     if(isset($_POST['btnSave']))
     {
@@ -84,53 +86,9 @@
 
   ?>
   <body>
-  <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand  " href="#">
-    <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ">
-      <li class="nav-item  ">
-        <a class="link " href="adminhome.php">Home <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="servicesSetup.php">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="newsletterSetup.php">NewsLetter</a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="howparenthelpSetup.php">HowParentHelp</a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="socialmediaappSetup.php">SocialMediaApps</a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="contactList.php">Help/Support</a>
-      </li>
-      <li class="nav-item">
-        <a class="link " href="MemberList.php">MemberList</a>
-      </li>
-      <li class="nav-item">
-    
-      </li>
-      
-    </ul>
-    <div class="logout ">
-    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
-    </div>
-    
-    
-    <!-- <form class="form-inline my-2  d-flex flex-row gap-3 mr-20 w-35 form-responsive">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    -->
-  </div>
-</nav>
+   <!-- Navbar start -->
+   <?php include("adminnav.php"); ?>
+  <!-- Navbar end -->
     <header>
       <h1 class="mt-3"><strong>Social Media Apps Set up</strong></h1>
       <!-- Custom Cursors and 3D Illustrations can be added here -->
@@ -192,8 +150,8 @@
           <?php
           if($result->num_rows > 0 && !isset($_GET['editid'])) {
           ?>
-            <table  class="table table-hover  table-info  overflow-hidden rounded">
-              <tr class="">
+            <table  class="table table-striped table-hover  table-info  overflow-hidden rounded align-items-center text-center">
+              <tr class="table-dark">
                 <th scope="col">ID</th>
                 <th scope="col">Logo</th>
                 <th scope="col">Link</th>
@@ -225,17 +183,9 @@
         </div>
       </section>
       <!-- Table End -->
-
-    <footer>
-      <p>You are here: Social Media Apps Setup</p>
-      <div class="footer-content">
-        <p>&copy; 2024 Online Safety Campaign</p>
-        <!-- Add social media buttons with relevant links -->
-        <a href="#" style="color: white">Facebook</a>
-        <a href="#" style="color: white; margin-left: 10px">Twitter</a>
-        <a href="#" style="color: white; margin-left: 10px">Instagram</a>
-      </div>
-    </footer>
+      <!-- Footer Start -->
+      <?php include("adminfooter.php")?>
+      <!-- Footer End -->
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

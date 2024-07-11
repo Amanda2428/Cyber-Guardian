@@ -101,16 +101,7 @@
       </section>
     </main>
 
-    <footer>
-      <p>You are here: Popular Apps</p>
-      <div class="footer-content">
-        <p>&copy; 2024 Online Safety Campaign</p>
-        <!-- Add social media buttons with relevant links -->
-        <a href="#" style="color: white">Facebook</a>
-        <a href="#" style="color: white; margin-left: 10px">Twitter</a>
-        <a href="#" style="color: white; margin-left: 10px">Instagram</a>
-      </div>
-    </footer>
+    <?php include("userfooter.php")?>
   <!-- Bootstrap 5 JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
