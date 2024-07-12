@@ -7,9 +7,14 @@ session_start();
 
 $wrongPassword = false;
 $invalidCredentials = false;
+$wait = false;
 
 if(isset($_POST['btnLogin'])) :
-  session_start(); 
+  if (isset($_SESSION['login_attempt_time'])) {
+    $loginAttemptTime = $_SESSION['login_attempt_time'];
+  } else {
+    $loginAttemptTime = 0;
+  }
   $email = $_POST['email'];
   $sql = "SELECT * FROM member WHERE email = '$email'";
   
@@ -28,12 +33,30 @@ if(isset($_POST['btnLogin'])) :
       endif;
     else : 
       $wrongPassword = true;
+      $_SESSION['login_attempt_time'] = $loginAttemptTime + 1;
+      $_SESSION['login_attempt_time_expires'] = time() + (60 * 5);
     endif;
   } catch (Exception $err) {
     $invalidCredentials = true;
+    $_SESSION['login_attempt_time'] = $loginAttemptTime + 1;
+    $_SESSION['login_attempt_time_expires'] = time() + (60 * 5);
   }
-endif;
 
+  
+  endif;
+  if(isset($_SESSION['login_attempt_time']) and isset($_SESSION['login_attempt_time_expires'])) : 
+    if($_SESSION['login_attempt_time_expires'] < time()) {
+        unset($_SESSION['login_attempt_time']);
+        unset($_SESSION['login_attempt_time_expires']);
+        return true;
+    } else {
+        if($_SESSION['login_attempt_time'] >= 3) {
+            $wait = true;
+        } else {
+            $wait = false;
+        };
+    }
+  endif;
 ?>
 <head>
   <meta charset="UTF-8" />
@@ -45,6 +68,11 @@ endif;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+      #btnLogin:disabled {
+        background-color: gray;
+      }
+    </style>
 </head>
 
 <body>
@@ -87,7 +115,8 @@ endif;
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" required />
               <?= ($wrongPassword or $invalidCredentials) ? '<span class="text-danger">Invalid Credentials</span>' : "" ?>
-              <button type="submit" name="btnLogin">Login</button>
+              <?= $wait ? '<span class="text-danger">You can try agin in 5 minutes.</span>' : "" ?>
+              <button <?= $wait ? 'disabled' : '' ?> type="submit" id="btnLogin" name="btnLogin">Login</button>
           </form>      
           <br>
               Not a member register <a href="registration.php"> here </a>
