@@ -15,7 +15,7 @@
                     <div class="col-lg-3 col-md-6">
                         
                         <ul>
-                        <h4 class="news"><strong>About</strong></h4>
+                        <h4 class="news"><strong>All Contacts</strong></h4>
                             <li>
                                 <i class="fa-solid fa-chevron-right"></i>
                                 <a href="home.php">Home</a>
@@ -81,4 +81,10 @@
             </div>
         </div>  
     </div>
+</div>
+<!-- Go Top -->
+<div id="goTop">
+    <a href="#nav" id="goTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 </div>

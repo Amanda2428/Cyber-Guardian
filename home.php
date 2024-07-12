@@ -46,26 +46,68 @@
   <!-- Navbar start -->
   <?php include("usernav.php");?>
   <!-- Navbar End -->
-    <header>
-      <h1 class="mt-3"><strong> CYBER GURADIAN </strong></h1>
-      <!-- Custom Cursors and 3D Illustrations can be added here -->
-    </header>
-
+   <section id="carousel" >
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                      aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                      aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                      aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                      aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                      aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                  <div class="carousel-item active object-fit-cover" data-bs-interval="2000">
+                      <img src="images/iStock-1028057054.jpg" class="d-block w-100 object-fit-cover" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                      <img src="imagest/pic2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                      <img src="imagest/pic3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                      <img src="imagest/pic4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                      <img src="imagest/pic5.jpg" class="d-block w-100" alt="...">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+  </section>
+ 
+  <header>
+    <h1 class="mt-3"><strong> Welcome to Our Campaign</strong></h1>
+    <div class="searching container d-flex flex-column align-items-center  ">
+        <form class="form-inline my-2  d-flex flex-row gap-3 mr-20  form-responsive">
+          <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <p>Empowering teenagers to navigate the digital world safely.</p>
+  </div>
+  </header>
     <main>
       <section id="home">
-        <h2>Welcome to Our Campaign</h2>
-        
-        <form id="home" class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-25 form-responsive" action="/search" method="get">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-        <p>Empowering teenagers to navigate the digital world safely.</p>
-       <?php 
-         if($resService->num_rows>0)
-         {
+      <?php 
+        if($resService->num_rows>0)
+        {
           while($rowSer=$resService->fetch_assoc())
           {
-       ?>
+      ?>
         <!--  Service 1 -->
         <div class="web-service">
           <h3><?php echo $rowSer['title']; ?></h3>
@@ -78,9 +120,8 @@
         </div>
         <?php 
           }
-         }
-        ?>
-   
+        }
+        ?>   
         <!-- Most Popular Social Media Apps -->
         <section class="popular-apps">
           <h3>Most Popular Social Media Apps</h3>
@@ -94,7 +135,6 @@
             <!-- Add more social media apps as needed -->
           </ul>
         </section>
-
         <!-- How to Stay Safe Online -->
         <section class="stay-safe-online">
           <h3>How to Stay Safe Online</h3>
@@ -108,7 +148,6 @@
             <li>Verify the authenticity of online information</li>
           </ul>
         </section>
-
         <section id="contact">
           <?php 
             if($sub==1)
@@ -148,12 +187,13 @@
           <?php }
           ?>
         </section>
-
-        
       </section>
     </main>
-   
+   <!-- Footer start -->
     <?php include("userfooter.php")?>
+    <!-- Footer End -->
+
+
 
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

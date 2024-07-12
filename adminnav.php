@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg " id="nav">
     <a class="navbar-brand  " href="#">
     <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
     </a>
