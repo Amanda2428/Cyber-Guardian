@@ -577,5 +577,9 @@ a:hover {
   height: 460px;
   object-fit: cover;
 }
-
+.disable:hover{
+  background-color: red;
+  color: white;
+  cursor: none;
+}
 
