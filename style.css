@@ -586,7 +586,7 @@ a:hover {
   left: 40%;
   transition: 0.2s;
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: 4px solid #179d75;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -594,8 +594,7 @@ a:hover {
   width: 80px;
   height: 80px;
   font-size: 25px;
-  background-color: #0E5640;
-  color: white;
+  background-color: white;
 }
 .icon img{
   width: 100%;
@@ -610,13 +609,13 @@ a:hover {
   text-align: center;
   border: 1px solid #ebe6e4;
   position: relative;
+  border-radius: 20px;
   background: #FAF9F8;
 }
 
 .icon-box:hover .icon {
-  color: #0E5640;
   background-color: white;
-  border: 2px solid #0E5640;
+  border: 2px solid white;
   font-size: 30px;
 }
 

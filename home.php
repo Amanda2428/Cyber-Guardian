@@ -105,7 +105,8 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         <p>Empowering teenagers to navigate the digital world safely.</p>
-  </div>
+    </div>
+    
   </header>
 
     <main>
@@ -121,13 +122,13 @@
 
               <div class="col-lg-4  col-md-6 mb-5">
                 <div class="icon-box d-flex flex-column align-content-center justify-content-center">
-                  <div class="icon"><img src="images/iStock-1028057054.jpg" alt="" class="rounded-circle"></div>
+                  <div class="icon"><img src="<?php echo "images\\" . $rowSer['serviceImg']; ?>" alt="" class="rounded-circle"></div>
                   <h4 class="title mt-2">
                   <a href="" class="mt-5"><b><?php echo $rowSer['title']; ?></b></a>
                   </h4>
                   <p class="description custom-truncate"><strong><?php echo $rowSer['description']; ?></strong></p>
                   <p class="description custom-truncate"><strong><?php echo $rowSer['info']; ?></strong></p>
-                  <p><strong><?php echo $rowSer['createdate']; ?></strong></p>
+                  <p>Publish Date: <?php echo $rowSer['createdate']; ?></p>
                 </div>
               </div>
               <?php 

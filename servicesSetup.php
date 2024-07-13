@@ -23,22 +23,36 @@
       $title=$_POST['title'];
       $des =$_POST['description'];
       $info=$_POST['info'];
+      if(isset($_FILES["simg"])&& $_FILES["simg"]["error"]==0)
+      {
+          //Read file name
+          $Filename=$_FILES["simg"]["name"];
+          //Read file path
+          $Filepath=$_FILES["simg"]["tmp_name"];
+      }
 
     // Insert Query
-      $sql="INSERT INTO services (title, description, info) VALUES ('$title', '$des', '$info')";
+      $sql="INSERT INTO services (title, description, info,serviceImg) VALUES ('$title', '$des', '$info','$Filename')";
       if ($conn->query($sql) === TRUE) {
+        echo " Insert Service setup successfully ";
+        move_uploaded_file($Filepath, "images/". $Filename);
         header("location:servicesSetup.php");
-      } else {
-        echo "Error: " . $conn->error;
+      }  exit();
       }
-    }
     // Showing of text for inserted data
     if (isset($_POST['btnUpdate'])) {
       $id = $conn->real_escape_string($_POST['id']);
       $title = $conn->real_escape_string($_POST['title']);
       $des = $conn->real_escape_string($_POST['description']);
       $info = $conn->real_escape_string($_POST['info']);
-      $sql = "UPDATE services SET title='$title', description='$des', info = '$info' WHERE id='$id'";
+      if (isset($_FILES["simg"]) && $_FILES["simg"]["error"] == 0) {
+        $Filename = $_FILES["simg"]["name"];
+        $Filepath = $_FILES["simg"]["tmp_name"];
+        move_uploaded_file($Filepath, "images/" . $Filename);
+        $sql = "UPDATE services SET title='$title',  description='$des', info = '$info' ,serviceImg = '$Filename' WHERE id='$id'";
+      } else {
+        $sql = "UPDATE services SET title='$title',  description='$des', info = '$info' WHERE id='$id'";
+      }
 
     
       if ($conn->query($sql) === TRUE) {
@@ -96,7 +110,22 @@
 
             <label for="info">info:</label>
             <textarea name="info" id="info" required><?php echo isset($row['info']) ? $row['info'] : ''; ?></textarea>
-         
+
+            <label for="image" class="form-label">Image:</label>
+            <input class="form-control" type="file" id="image" name="simg" <?php echo isset($row['serviceImg']) ? '' : 'required'; ?> />
+            <?php 
+            
+            if (isset($_GET['editid'])){
+              ?>
+              <label for="col" class="form-label">Pervious Image:</label>
+              <img src="<?php echo "images\\" . $row['serviceImg']; ?>" width="100%" height="300px" alt="">
+            <?php
+            } else {
+            ?>
+              <img src="<?php echo "images\\" . $row['serviceImg']; ?>" alt="" hidden>
+            <?php
+            }
+            ?>
             <?php if(isset($_GET['editid'])) { ?>
               <button type="submit" name="btnUpdate">Update</button>
             <?php } else { ?>
@@ -119,6 +148,7 @@
             <table  class="table table-hover  table-info  overflow-hidden rounded">
               <tr class="table-dark">
                 <th scope="col">ID</th>
+                <th scope="col">Image</th>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
                 <th scope="col">Information</th>
@@ -130,6 +160,7 @@
               ?>
                 <tr>
                   <td class="responsive-text"><?php echo $row['id']; ?></td>
+                  <td><img src="<?php echo "images\\" . $row['serviceImg']; ?>" class="responsive-img" alt=""></td>
                   <td class="responsive-text"><?php echo $row['title']?></td>
                   <td class="responsive-text "><?php echo $row['description']?></td>
                   <td class="responsive-text "><?php echo $row['info']?></td>
