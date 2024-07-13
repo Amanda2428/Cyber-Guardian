@@ -4,7 +4,7 @@
         <div class="row gx-5">
             <div class="col">
                 <div class="p-3 text-start">
-                    <p>Login with <?php echo $email; ?></p>
+                    <p>Admin Login with <?php echo $email; ?></p>
                     <p>&copy; 2024 <strong>Cyber Guardian</strong></p>
                 </div>
             </div>

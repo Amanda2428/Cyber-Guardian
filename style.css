@@ -533,7 +533,7 @@
   font-weight: bold;
   font-size: 15px;
   border-radius: 50%;
-  margin-left: 50px;
+  margin-left: 20px;
   background-color: black;
 
 }
@@ -577,9 +577,57 @@ a:hover {
   height: 460px;
   object-fit: cover;
 }
-.disable:hover{
-  background-color: red;
+#services .container .title a{
+  color: #0E5640;
+}
+.icon {
+  position: absolute;
+  top: -36px;
+  left: 40%;
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  font-size: 25px;
+  background-color: #0E5640;
   color: white;
-  cursor: none;
+}
+.icon img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
+.icon-box {
+  /* background-color: aqua; */
+  padding: 50px 20px;
+  text-align: center;
+  border: 1px solid #ebe6e4;
+  position: relative;
+  background: #FAF9F8;
+}
+
+.icon-box:hover .icon {
+  color: #0E5640;
+  background-color: white;
+  border: 2px solid #0E5640;
+  font-size: 30px;
+}
+
+.title a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.description {
+  font-size: 15px;
+}
+.services .container .title a{
+  color: #0E5640;
+}

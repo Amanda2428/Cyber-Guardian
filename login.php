@@ -4,7 +4,6 @@
 require_once("dbconnect.php");
 
 session_start();
-
 $wrongPassword = isset($_GET['wrongPassword']);
 $invalidCredentials = isset($_GET['invalidCredentials']);
 $wait = false;
@@ -121,7 +120,7 @@ endif;
         <?= $wait ? '<span class="text-danger">You can try agin in 5 minutes.</span>' : "" ?>
 
         <?php if ($wait) : ?>
-          <button disabled type="submit" id="btnLogin" class="bg-danger text-light pe-none" name="btnLogin">Login</button>
+          <button disabled type="submit" id="btnLogin" class="bg-danger text-light pe-none " name="btnLogin">Login</button>
         <?php else : ?>
           <button type="submit" id="btnLogin" name="btnLogin">Login</button>
         <?php endif; ?>

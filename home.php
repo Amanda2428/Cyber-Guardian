@@ -6,8 +6,15 @@
     <title>Online Safety Campaign</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- aos link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -47,7 +54,7 @@
   <?php include("usernav.php");?>
   <!-- Navbar End -->
    <section id="carousel" >
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade " data-bs-ride="true">
               <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                       aria-current="true" aria-label="Slide 1"></button>
@@ -100,28 +107,36 @@
         <p>Empowering teenagers to navigate the digital world safely.</p>
   </div>
   </header>
+
     <main>
-      <section id="home">
-      <?php 
-        if($resService->num_rows>0)
-        {
-          while($rowSer=$resService->fetch_assoc())
-          {
-      ?>
-        <!--  Service 1 -->
-        <div class="web-service">
-          <h3><?php echo $rowSer['title']; ?></h3>
-          <p>
-          <?php echo $rowSer['description']; ?>
-          </p>
-          <p><strong><?php echo $rowSer['info']; ?></strong> </p>
-          <p><strong><?php echo $rowSer['createdate']; ?></strong></p>
-          <a href="#">Register Now</a>
-        </div>
-        <?php 
-          }
-        }
-        ?>   
+        <section id="services">
+          <div class="container text-center">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <?php 
+            if($resService->num_rows>0)
+            {
+              while($rowSer=$resService->fetch_assoc())
+              {
+            ?>
+
+              <div class="col-lg-4  col-md-6 mb-5">
+                <div class="icon-box d-flex flex-column align-content-center justify-content-center">
+                  <div class="icon"><img src="images/iStock-1028057054.jpg" alt="" class="rounded-circle"></div>
+                  <h4 class="title mt-2">
+                  <a href="" class="mt-5"><b><?php echo $rowSer['title']; ?></b></a>
+                  </h4>
+                  <p class="description custom-truncate"><strong><?php echo $rowSer['description']; ?></strong></p>
+                  <p class="description custom-truncate"><strong><?php echo $rowSer['info']; ?></strong></p>
+                  <p><strong><?php echo $rowSer['createdate']; ?></strong></p>
+                </div>
+              </div>
+              <?php 
+                }
+              }
+              ?>  
+            </div>
+          </div>
+        </section>
         <!-- Most Popular Social Media Apps -->
         <section class="popular-apps">
           <h3>Most Popular Social Media Apps</h3>
@@ -188,14 +203,26 @@
           ?>
         </section>
       </section>
+
     </main>
    <!-- Footer start -->
     <?php include("userfooter.php")?>
     <!-- Footer End -->
-
-
-
+    <!-- Js link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
   </body>
 </html>

@@ -11,4 +11,3 @@ function handleMediaQueryChange(e) {
   mediaQuery.addListener(handleMediaQueryChange);
   handleMediaQueryChange(mediaQuery); // Initial check  
 
-
