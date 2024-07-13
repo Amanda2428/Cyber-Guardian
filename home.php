@@ -127,7 +127,7 @@
                   <a href="" class="mt-5"><b><?php echo $rowSer['title']; ?></b></a>
                   </h4>
                   <p class="description custom-truncate"><strong><?php echo $rowSer['description']; ?></strong></p>
-                  <p class="description custom-truncate"><strong><?php echo $rowSer['info']; ?></strong></p>
+                  <p class="description "><strong><?php echo $rowSer['info']; ?></strong></p>
                   <p>Publish Date: <?php echo $rowSer['createdate']; ?></p>
                 </div>
               </div>
