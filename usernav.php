@@ -1,3 +1,10 @@
+<?php
+  if(isset($_POST['btnSearch'])) : 
+    header("location:" . $_POST['searchIn'] . "&keyword=" . $_POST['searchKeyWord']);
+    exit();
+  endif;
+?>
+
 <nav class="navbar navbar-expand-lg " id="nav">
     <a class="navbar-brand  " href="#">
     <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
@@ -35,9 +42,15 @@
     </div>
     
     
-    <form class="form-inline my-2 d-flex flex-row gap-3 mr-20 w-35 form-responsive">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form action="#" method="POST" class="form-inline my-2 d-flex flex-row gap-3 mr-20 form-responsive">
+      <input name="searchKeyWord" class="w-100 form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+      <select name="searchIn" id="" class="form-control" required>
+        <option value="home.php?search=1&table=newsletter">Newsletter</option>
+        <option value="home.php?search=1&table=services">Service</option>
+        <option value="popular-apps.php?search=1&table=socialmediaapps">Social Media Apps</option>
+        <option value="popular-apps.php?search=1&table=howparenthelp">How Parents Help</option>
+      </select>
+      <button name="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <div class="profile">
       <img class="wh"src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />
