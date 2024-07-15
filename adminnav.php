@@ -15,7 +15,7 @@
       </li>
       <li class="nav-item">
         <a class="link " href="newsletterSetup.php">NewsLetter</a>
-      </li>
+      </li>ီ
       <li class="nav-item">
         <a class="link " href="howparenthelpSetup.php">HowParentHelp</a>
       </li>

@@ -111,7 +111,7 @@ if (isset($_POST['btnSub'])) {
     <div class="see-more row ">
       <div class="see-text col-lg-9 text-center">
         <h2 class="mb-4 "><strong>Welcome to <span class="headcolor">Our Campaign !</span></strong></h2>
-        <p >
+        <p>
           Empowering teenagers to navigate the digital world safely.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas et labore, eos recusandae
           laudantium explicabo eveniet sint ducimus reprehenderit adipisci perspiciatis reiciendis odit

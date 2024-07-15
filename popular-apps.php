@@ -41,17 +41,17 @@ $result = $conn->query($sql1);
   <main>
     <section id="popular-apps">
       <h2>Most Popular Social Media Apps</h2>
-      <?php if(isset($_GET['search'])) : ?>
-      <h3>Search result on : <?= $keyword ?></h3>
-      <button>
-        <a href="popular-apps.php">Clear Search</a>
-      </button>
-      <?php
+      <?php if (isset($_GET['search'])) : ?>
+        <h3>Search result on : <?= $keyword ?></h3>
+        <button>
+          <a href="popular-apps.php">Clear Search</a>
+        </button>
+        <?php
       endif;
       if ($result->num_rows > 0) {
-        
+
         while ($row = $result->fetch_assoc()) {
-      ?>
+        ?>
           <!--  Service 1 -->
           <div class="web-service">
             <h3><?php echo $row['name']; ?></h3>
