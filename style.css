@@ -665,6 +665,161 @@ a:hover {
 .see-more-btn:hover a {
   color: #198754;
 }
+.card {
+  border-radius: 0px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  width: 90%;
+}
+
+.card a {
+  background-color: orangered;
+  border: 1px solid orangered;
+}
+
+.single-head {
+  font-size: 30px;
+  line-height: 2;
+}
+
+.single-text {
+  line-height: 2;
+}
+
+.card-body a {
+  margin-left: 80%;
+}
+
+.card-custom-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  max-height: 10em;
+  padding: 0 20px;
+}
+
+.card-img-top {
+  height: 65%;
+  border-radius: 0px;
+}
+
+.card-blog {
+  width: 100%;
+  background-color: red;
+}
+.blog-2 .search-form form input[type="text"] {
+  border: 0;
+  padding: 5px;
+  border-radius: 0px;
+  width: calc(100% - 40px);
+  border: 1px solid black;
+
+}
+
+.blog-2 .search-form form button {
+  position: absolute;
+  background: none;
+  font-size: 16px;
+  padding: 0 15px;
+  background: #f03c02;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  border-radius: 0px;
+  line-height: 2.3;
+}
+
+.blog-2 .search-form form button i {
+  line-height: 0;
+}
+
+.blog-2 .search-form form {
+  padding: 10px;
+}
+
+.blog-2.search-form form button:hover {
+  background: #fd4509;
+}
+.blog-1 .card {
+  margin-bottom: 5%;
+}
+
+.blog-div {
+  width: 100%;
+  padding-bottom: 30px;
+  /* background-color: lightgray; */
+  display: flex;
+}
+
+.blog-1 {
+  width: 70%;
+  /* background-color: lightblue; */
+}
+
+.blog-2 {
+  width: 30%;
+  height: 80%;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  /* border-radius: 20px; */
+}
+
+.blog-2 a:hover {
+  color: orangered;
+}
+.blog-2  a{
+  font-size: 10px;
+}
+
+
+
+.categories a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+
+}
+
+.categories ul {
+  padding-left: 0rem;
+}
+
+
+
+.post-item {
+  padding: 2px;
+}
+
+.post-item-img {
+  width: 200px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.post-item time {
+  font-size: 14px;
+}
+
+.post-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-item a {
+  font-size: 15px;
+}
+
+
   /* Responsive Styles */
   @media only screen and (max-width: 600px) {
     nav > ul {
@@ -682,8 +837,6 @@ a:hover {
     height: 300px;
     width: 300px;
   }
-
-/* Add additional styles for specific elements as needed */
 /* Responsive Styles */
 @media only screen and (max-width: 600px) {
   nav > ul {
@@ -696,7 +849,6 @@ a:hover {
     flex-direction: row;
   }
 }
-/* Adjust image size for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
   .responsive-img {
     width: 200px;
@@ -704,21 +856,18 @@ a:hover {
   }
 }
 
-/* Adjust image size for screens smaller than 576px */
 @media only screen and (max-width: 576px) {
   .responsive-img {
     width: 150px;
     height: 90px;
   }
 }
-/* Adjust text size for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
   .responsive-text {
     font-size: 14px;
   }
 }
 
-/* Adjust text size for screens smaller than 576px */
 @media only screen and (max-width: 576px) {
   .responsive-text {
     font-size: 12px;
@@ -732,7 +881,6 @@ a:hover {
   }
   .logout a{
     display: flex;
-    /* margin-top: 10px; */
     justify-content: center;
     margin: 0;
   
@@ -755,7 +903,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   .stay-safe-img {
-    display: none; /* Hides the image on small screens */
+    display: none; 
   }
 
   .stay-safe-online {
@@ -767,3 +915,30 @@ a:hover {
     text-align: center;
   }
 }
+@media (max-width: 991px) {
+  .blog-div {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .blog-1,
+  .blog-2 {
+      width: 100%;
+  }
+  .blog-1 .card{
+      width: 100%;
+  }
+
+}
+@media(min-width: 763x)
+{
+  .blog-1,
+  .blog-2 {
+      width: 100%;
+  }
+  .blog-1 .card{
+      width: 100%;
+  }
+}
+
