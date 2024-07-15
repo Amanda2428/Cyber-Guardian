@@ -211,7 +211,7 @@ if (isset($_POST['btnSub'])) {
                 <div class=" col-lg-4 col-md-6 pb-5 ">
                   <div class="portfolio-things ">
                     <img class="newsImg" src="images/<?php echo $rowNews['newsimg'] ?>" alt="Image not found">
-                    <a href="images/instagram.jpg" class="portfolio-info">
+                    <a href="news-card.php?id=<?php echo $rowNews['id']; ?>" class="portfolio-info"> 
                       <h4 class="custom-truncate"><b><?php echo $rowNews['title'] ?></b></h4>
                       <span class="custom-truncate"><?php echo $rowNews['content'] ?></span>
                     </a>
