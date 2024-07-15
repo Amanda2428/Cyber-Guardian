@@ -30,7 +30,7 @@
       </li>
     </ul>
     <div class="logout ">
-    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+    <a class="d-flex flex-row" href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
     <div class="profile">
       <img class="wh"src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />

@@ -25,7 +25,7 @@ include("dbconnect.php");
 if (isset($_GET['search']) and $_GET['table'] == 'services') :
   $keyword = $_GET['keyword'];
   $sql = "SELECT * FROM services WHERE title LIKE '%$keyword%' OR description LIKE '%$keyword%' OR info LIKE '%$keyword%'";
-else: 
+else :
   $sql = "SELECT * from services";
 endif;
 $resService = $conn->query($sql);
@@ -38,9 +38,15 @@ if (isset($_GET['search']) and $_GET['table'] == 'newsletter') :
 else :
   $sql2 = "SELECT * from newsletter";
 endif;
-
-
 $resNews = $conn->query($sql2);
+
+if (isset($_GET['search']) and $_GET['table'] == '	socialmediaapps') :
+  $keyword = $_GET['keyword'];
+  $sql3 = "SELECT * from socialmediaapps WHERE name LIKE '%$keyword%'";
+else :
+  $sql3 = "SELECT * from socialmediaapps";
+endif;
+$resSocial = $conn->query($sql3);
 
 $sub = 0;
 $sql1 = "SELECT * from member WHERE email='$email'";
@@ -101,152 +107,188 @@ if (isset($_POST['btnSub'])) {
 </section>
 
 <header>
-  <h1 class="mt-3"><strong> Welcome to Our Campaign</strong></h1>
-  <div class="searching container d-flex flex-column align-items-center  ">
-    <form class="form-inline my-2  d-flex flex-row gap-3 mr-20  form-responsive">
-      <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search..." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <p>Empowering teenagers to navigate the digital world safely.</p>
+  <div class="container">
+    <div class="see-more row ">
+      <div class="see-text col-lg-9 text-center">
+        <h2 class="mb-4 "><strong>Welcome to <span class="headcolor">Our Campaign !</span></strong></h2>
+        <p >
+          Empowering teenagers to navigate the digital world safely.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas et labore, eos recusandae
+          laudantium explicabo eveniet sint ducimus reprehenderit adipisci perspiciatis reiciendis odit
+          officiis. Eaque ipsam doloribus sapiente repudiandae consectetur.
+        </p>
+      </div>
+      <div class="col-lg-3 d-flex align-items-center justify-content-center">
+        <div class="see-more-btn">
+          <a href="#newletters">See More</a>
+        </div>
+      </div>
+    </div>
   </div>
 
 </header>
 
-<main>
-  <section id="services">
-    <div class="container text-center">
-      <div class="row" data-aos="fade-up" data-aos-duration="1000">
-        <?php
-        if ($resService->num_rows > 0) {
-          if(isset($_GET['search']) and $_GET['table'] == 'services') {
-            echo '
-              <button class="btn btn-danger mb-5">
-                <a href="home.php">Clear Search</a>
-              </button>
-            ';
+<body>
+  <main>
+    <section id="services">
+      <div class="container text-center">
+        <h1 class="text-center mb-5"><strong>Our Services Are Here!</strong></h1>
+        <div class="row d-flex align-item-center justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+          <?php
+          if ($resService->num_rows > 0) {
+            if (isset($_GET['search']) and $_GET['table'] == 'services') {
+              echo '<button type="button " class="btn btn-warning mb-5 "><a href="home.php" >Clear Search</a></button>';
+            }
+            while ($rowSer = $resService->fetch_assoc()) {
+          ?>
+
+              <div class="col-lg-4  col-md-6 mb-5">
+                <div class="icon-box d-flex flex-column align-content-center justify-content-center">
+                  <div class="icon"><img src="<?php echo "images\\" . $rowSer['serviceImg']; ?>" alt="" class="rounded-circle"></div>
+                  <h4 class="title mt-2">
+                    <a href="" class=""><b><?php echo $rowSer['title']; ?></b></a>
+                  </h4>
+                  <p class="description custom-truncate "><strong><?php echo $rowSer['description']; ?></strong></p>
+                  <p class="description custom-truncate "><strong><?php echo $rowSer['info']; ?></strong></p>
+                  <p class="mt-3">Publish Date: <?php echo $rowSer['createdate']; ?></p>
+                </div>
+              </div>
+            <?php
+            }
+          } else {
+            ?>
+            <h2><?= (isset($_GET['search']) and $_GET['table'] == 'services') ? "Nothing found on : " . $_GET['keyword'] : "No services yet.." ?></h2>
+            <button class="btn btn-danger mb-5">
+              <a href="home.php">Clear Search</a>
+            </button>
+          <?php
           }
-          while ($rowSer = $resService->fetch_assoc()) {
+          ?>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Stay Safe Online -->
+    <section id="stay-safe-online">
+      <div class="container-fluid">
+        <div class="row stay-safe-online ">
+          <div class="col stay-safe-img ">
+            <img src="images/stay-safe.png" alt="" class="w-100 h-100">
+          </div>
+          <div class="col">
+            <h1 class="mb-3 text-center"><strong>How to Stay Safe Online</strong></h1>
+            <hr>
+            <p class="mb-3 fs-5">Follow these tips to ensure a secure online experience:</p>
+            <ul class="arrow-list fs-5">
+              <li>Set strong, unique passwords</li>
+              <li>Enable two-factor authentication</li>
+              <li>Be cautious about sharing personal information</li>
+              <li>Regularly update privacy settings</li>
+              <li>Use antivirus software</li>
+              <li>Verify the authenticity of online information</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NewLetters -->
+    <section id="newletters">
+      <h1 class="mt-5 text-center"><strong>Newsletters</strong></h1>
+      <div class="container py-5 text-center " data-aos="fade-up" data-aos-duration="1000">
+
+        <?php
+        if ($sub == 1) {
         ?>
 
-            <div class="col-lg-4  col-md-6 mb-5">
-              <div class="icon-box d-flex flex-column align-content-center justify-content-center">
-                <div class="icon"><img src="<?php echo "images\\" . $rowSer['serviceImg']; ?>" alt="" class="rounded-circle"></div>
-                <h4 class="title mt-2">
-                  <a href="" class="mt-5"><b><?php echo $rowSer['title']; ?></b></a>
-                </h4>
-                <p class="description custom-truncate"><strong><?php echo $rowSer['description']; ?></strong></p>
-                <p class="description custom-truncate"><strong><?php echo $rowSer['info']; ?></strong></p>
-                <p>Publish Date: <?php echo $rowSer['createdate']; ?></p>
-              </div>
-            </div>
+          <div class="row d-flex align-item-center justify-content-center">
+            <?php
+            if ($resNews->num_rows > 0) {
+              if (isset($_GET['search']) and $_GET['table'] == 'newsletter') {
+                echo '<button type="button " class="btn btn-warning mb-5 "><a href="home.php" >Clear Search</a></button>';
+              }
+              while ($rowNews = $resNews->fetch_assoc()) {
+            ?>
+                <div class=" col-lg-4 col-md-6 pb-5 ">
+                  <div class="portfolio-things ">
+                    <img class="newsImg" src="images/<?php echo $rowNews['newsimg'] ?>" alt="Image not found">
+                    <a href="images/instagram.jpg" class="portfolio-info">
+                      <h4 class="custom-truncate"><b><?php echo $rowNews['title'] ?></b></h4>
+                      <span class="custom-truncate"><?php echo $rowNews['content'] ?></span>
+                    </a>
+                  </div>
+                </div>
+
+              <?php
+              }
+            } else {
+              ?>
+              <h2><?= (isset($_GET['search']) and $_GET['table'] == 'newsletter') ? "Nothing found on: $keyword" : "No newsletter yet.." ?></h2>
+              <button>
+                <a href="home.php" class="">Clear Search</a>
+              </button>
+            <?php
+            }
+          } else if ($sub == 1) {
+            ?>
+            <form action="#" method="POST">
+              <label for="name">Newsletter Subscription:</label>
+              <input type="radio" id="name" name="sub" value="1" required />Yes
+              <input type="radio" id="name" name="sub" value="0" required />No
+              <button type="submit" name="btnSub">Subscribe</button>
+            </form>
+
+
+          <?php } ?>
+          </div>
+      </div>
+    </section>
+    <!-- Most Popular Social Media Apps -->
+    <section class=" container  so-apps  rounded">
+      <h2 class="mb-4 text-center"><strong>Most Popular<span class="headcolor"> Social Media Apps</span></strong></h2>
+      <p class="text-center mb-3"> The following applications are currently the most popular social apps that allow users to communicate with one another.</p>
+      <ul class="d-flex align-content-center justify-content-center">
         <?php
+        if ($resSocial->num_rows > 0) {
+          if (isset($_GET['search']) and $_GET['table'] == 'socialmediaapps') {
+            echo '<button type="button " class="btn btn-warning mb-5 "><a href="home.php" >Clear Search</a></button>';
+          }
+          while ($rowSoc = $resSocial->fetch_assoc()) {
+        ?>
+
+            <li>
+              <img src="<?php echo "images\\" . $rowSoc['logo']; ?>">
+              <div class="app-name"><?php echo $rowSoc['name']; ?></div>
+            </li>
+          <?php
           }
         } else {
-        ?>
-          <h2><?= (isset($_GET['search']) and $_GET['table'] == 'services') ? "Nothing found on : " . $_GET['keyword'] : "No services yet.." ?></h2>
+          ?>
+          <h2><?= (isset($_GET['search']) and $_GET['table'] == 'socialmediaapps') ? "Nothing found on : " . $_GET['keyword'] : "No services yet.." ?></h2>
           <button class="btn btn-danger mb-5">
-              <a href="home.php">Clear Search</a>
+            <a href="home.php">Clear Search</a>
           </button>
         <?php
         }
         ?>
-      </div>
-    </div>
-  </section>
-  <!-- Most Popular Social Media Apps -->
-  <section class="popular-apps">
-    <h3>Most Popular Social Media Apps</h3>
-    <ul>
-      <li>Instagram</li>
-      <li>Facebook</li>
-      <li>Twitter</li>
-      <li>Snapchat</li>
-      <li>TikTok</li>
-      <li>WhatsApp</li>
-      <!-- Add more social media apps as needed -->
-    </ul>
-  </section>
-  <!-- How to Stay Safe Online -->
-  <section class="stay-safe-online">
-    <h3>How to Stay Safe Online</h3>
-    <p>Follow these tips to ensure a secure online experience:</p>
-    <ul>
-      <li>Set strong, unique passwords</li>
-      <li>Enable two-factor authentication</li>
-      <li>Be cautious about sharing personal information</li>
-      <li>Regularly update privacy settings</li>
-      <li>Use antivirus software</li>
-      <li>Verify the authenticity of online information</li>
-    </ul>
-  </section>
-  <section id="contact">
-    <?php
-    if ($sub == 1) {
-    ?>
-      <h2>News</h2>
-      <?php
-      if ($resNews->num_rows > 0) {
-        if(isset($_GET['search']) and $_GET['table'] == 'newsletter') {
-          echo '
-            <button>
-              <a href="home.php">Clear Search</a>
-            </button>
-          ';
-        }
-
-        while ($rowNews = $resNews->fetch_assoc()) {
-      ?>
-          <!--  Service 1 -->
-          <div class="web-service">
-            <h3><?php echo $rowNews['title']; ?></h3>
-            <p>
-              <?php echo $rowNews['content']; ?>
-            </p>
-            <p><img src="<?php echo "images\\" . $rowNews['newsimg']; ?>" width="200px"></p>
-            <p><strong><?php echo $rowNews['publishdate']; ?></strong></p>
-
-          </div>
-      <?php
-        }
-      } else {
-      ?>
-        <h2><?= (isset($_GET['search']) and $_GET['table'] == 'newsletter') ? "Nothing found on: $keyword" : "No newsletter yet.." ?></h2>
-        <button>
-          <a href="home.php">Clear Search</a>
-        </button>
-      <?php
-      }
-    } else {
-      ?>
-      <form action="#" method="POST">
-        <label for="name">Newsletter Subscription:</label>
-        <input type="radio" id="name" name="sub" value="1" required />Yes
-        <input type="radio" id="name" name="sub" value="0" required />No
-        <button type="submit" name="btnSub">Subscribe</button>
-      </form>
+      </ul>
+    </section>
 
 
-    <?php }
-    ?>
-
-
-  </section>
-
-</main>
-<!-- Footer start -->
-<?php include("userfooter.php") ?>
-<!-- Footer End -->
-<!-- Js link -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<!-- aos js -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<!-- Bootstrap 5 JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
-<script>
-  AOS.init();
-</script>
+  </main>
+  <!-- Footer start -->
+  <?php include("userfooter.php") ?>
+  <!-- Footer End -->
+  <!-- Js link -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- aos js -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Bootstrap 5 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 

@@ -38,18 +38,20 @@
 
     </ul>
     <div class="logout ">
-    <a class=" " href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
+    <a class="d-flex flex-row" href="logout.php"><i class="fa-solid fa-user"></i><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
     
     
-    <form action="#" method="POST" class="form-inline my-2 d-flex flex-row gap-3 mr-20 form-responsive">
-      <input name="searchKeyWord" class="w-100 form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
-      <select name="searchIn" id="" class="form-control" required>
+    <form action="#" method="POST" class="form-inline my-2 d-flex flex-row gap-3 mr-20 form-responsive w-50">
+      <input name="searchKeyWord" class=" form-control mr-sm-2 w-100" type="search" placeholder="Search" aria-label="Search" required>
+        
+      <select name="searchIn" class="form-control w-25" required>
+        <option value="#" disabled selected>↓</option>
         <option value="home.php?search=1&table=newsletter">Newsletter</option>
         <option value="home.php?search=1&table=services">Service</option>
         <option value="popular-apps.php?search=1&table=socialmediaapps">Social Media Apps</option>
         <option value="popular-apps.php?search=1&table=howparenthelp">How Parents Help</option>
-      </select>
+  </select>
       <button name="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <div class="profile">

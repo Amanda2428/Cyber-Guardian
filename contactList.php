@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+  <?php 
+      // Delete Query
+      if(isset($_GET['deleteid'])){
+        $did=$_GET['deleteid'];
+        $sql="DELETE from contactus where id='$did'";
+        if($conn->query($sql)==True){
+            echo"<div> Delete One Record Successfully</div>";
+            header("location:contactList.php");
+        }
+      }
+  ?>
     <!-- Navbar start -->
     <?php include("adminnav.php"); ?>
   <!-- Navbar end -->
@@ -50,6 +61,7 @@
                 <th scope="col">Message</th>
                 <th scope="col">Email</th>
                 <th scope="col">Received Date</th>
+                <th scope="col action">Action</th>
               </tr>
               <?php
                 while($row = $result->fetch_assoc()) {
@@ -60,6 +72,9 @@
                   <td class="responsive-text"><?php echo $row['message']?></td>
                   <td class="responsive-text "><?php echo $row['email']?></td>
                   <td class="responsive-text"> <?php echo $row['sentdate']; ?></td>
+                  <td class="action h-100">
+                  <a href="contactList.php?deleteid=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm w-100">Delete</a>
+                  </td>
                 </tr>
               <?php
                 }
