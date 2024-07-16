@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg " id="nav">
     <a class="navbar-brand  " href="#">
       <img src="images/logo.png" width="130px" height="70px" class="d-inline-block align-top" alt="">
     </a>
@@ -90,6 +90,11 @@
         <!-- Add more best practice guidance items as needed -->
       </ul>
     </section>
+    <div id="goTop">
+    <a href="#nav" id="goTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</div>
   </main>
 
   <!-- Footer Start -->

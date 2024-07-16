@@ -549,7 +549,7 @@ a:hover {
   border: 1px solid #ebe6e4;
   position: relative;
   border-radius: 20px;
-  background: #FAF9F8;
+  background: white;
 }
 
 .icon-box:hover .icon {

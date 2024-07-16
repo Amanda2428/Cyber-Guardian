@@ -16,4 +16,6 @@
             </div>
         </div>
     </div>
+<!-- Go Top -->
+
 </footer>

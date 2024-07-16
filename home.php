@@ -36,7 +36,7 @@ if (isset($_GET['search']) and $_GET['table'] == 'newsletter') :
   $keyword = $_GET['keyword'];
   $sql2 = "SELECT * FROM newsletter WHERE title LIKE '%$keyword%' OR content LIKE '%$keyword%'";
 else :
-  $sql2 = "SELECT * from newsletter";
+  $sql2 = "SELECT * from newsletter ";
 endif;
 $resNews = $conn->query($sql2);
 
