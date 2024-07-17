@@ -8,11 +8,9 @@
   <title>Online Safety Campaign</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- aos link -->
+  <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Style CSS -->
   <link rel="stylesheet" href="style.css">
@@ -211,7 +209,7 @@ if (isset($_POST['btnSub'])) {
                 <div class=" col-lg-4 col-md-6 pb-5 ">
                   <div class="portfolio-things ">
                     <img class="newsImg" src="images/<?php echo $rowNews['newsimg'] ?>" alt="Image not found">
-                    <a href="news-card.php?id=<?php echo $rowNews['id']; ?>" class="portfolio-info"> 
+                    <a href="news-card.php?id=<?php echo $rowNews['id']; ?>" class="portfolio-info">
                       <h4 class="custom-truncate"><b><?php echo $rowNews['title'] ?></b></h4>
                       <span class="custom-truncate"><?php echo $rowNews['content'] ?></span>
                     </a>
@@ -277,19 +275,18 @@ if (isset($_POST['btnSub'])) {
   </main>
   <!-- Footer start -->
   <?php include("userfooter.php") ?>
-  <!-- Footer End -->
-  <!-- Js link -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <!-- aos js -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <!-- Bootstrap 5 JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
   <script src="script.js"></script>
+  <!-- Footer End -->
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- AOS js -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-
 </body>
+
 
 </html>

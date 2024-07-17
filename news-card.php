@@ -67,9 +67,15 @@ if (isset($_GET['id'])) {
                         <?php else : ?>
                             <p>No news item to display.</p>
                         <?php endif; ?>
-                        
+                    <div class="d-flex gap-3 align-items-center ">
+                    <h5 class="m-0">Please Click To more see Newsletter </h5>
+                    <button type="button" class="btn btn-success "><a href="home.php" class="text-decoration-none text-light">See More</a></button>
                     </div>
+                       
+                    </div>
+                    
                     <div class="blog-2 col-lg-4">
+
                         <h3 class="sidebar-title">Recent Posts</h3>
                         <div class="sidebar-item categories">
                             <?php
@@ -92,7 +98,9 @@ if (isset($_GET['id'])) {
                             }
                             ?>
                         </div>
+                  
                     </div>
+                   
                 </div>
             </div>
         </section>
