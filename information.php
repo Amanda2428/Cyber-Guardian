@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +14,11 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<?php 
+<?php
 session_start();
 $email = $_SESSION['user']['email'];
 ?>
+
 <body>
     <!-- Navbar start -->
     <?php include("usernav.php"); ?>
@@ -27,7 +29,7 @@ $email = $_SESSION['user']['email'];
     </header>
     <main>
         <section id="about-us" class="about-us">
-            <div class="container">
+            <div class="container-fluid ">
                 <div class="row no-gutters d-flex align-item-center justify-content-center">
                     <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right">
                         <img src="./images/logo.png" alt="">
@@ -36,19 +38,76 @@ $email = $_SESSION['user']['email'];
                         <div class="content px-2 gap-2 d-flex flex-column justify-content-center text-center">
                             <h3 data-aos="fade-up" class="mb-3"><b>Our Aims</b></h3>
                             <p data-aos="fade-up">
-                                Our aim is to educate and empower individuals, especially teenagers, 
+                                Our aim is to educate and empower individuals, especially teenagers,
                                 to navigate the digital world safely. We strive to provide comprehensive
                                 resources and guidance to help people understand the importance of online safety and how to protect themselves from potential threats.
                             </p>
-                            <h3 data-aos="fade-up" class="mb-3"><b>Our Missions</b></h3>
-                            <p data-aos="fade-up">
-                                Our aim is to educate and empower individuals, especially teenagers, to navigate the digital world safely. We strive to provide comprehensive resources and guidance to help people understand the importance of online
-                                safety and how to protect themselves from potential threats.
-                            </p>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="aim">
+
+            <h1 class="text-center p-5"><strong>Latest Campaign</strong></h1>
+            <div class="card-group">
+                <div class="card rounded-4">
+                    <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Celebrated in July</small>
+                    </div>
+                </div>
+                <div class="card rounded-4">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Celebrated in July</small>
+                    </div>
+                </div>
+                <div class="card rounded-4">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mission-section  ">
+                <h1 class="mission-title "data-aos="fade-up" class="mb-3"><strong>Our Mission</strong></h1>
+                <p class="mission-text" data-aos="fade-up">
+                    Our mission is to empower individuals with the knowledge and
+                    tools necessary to stay safe online. We aim to raise awareness
+                    about potential online threats and promote responsible digital
+                    behavior to ensure a secure and positive internet experience for everyone.
+                </p>
+            </div>
+        </section>
+        <section id="information">
+                <div class="row text-center d-flex align-items-center justify-content-center ">
+                    <div class="col-6">
+                        <h1>Hi</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat iure minus reprehenderit magnam dolore fuga consequuntur fugiat quo officiis? Corporis ipsa pa
+                            riatur eligendi in rem repellat illo quae quia.</p>
+                            <hr>
+                        <h1>Hi</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat iure minus reprehenderit magnam dolore fuga consequuntur fugiat quo officiis? Corporis ipsa pa
+                            riatur eligendi in rem repellat illo quae quia.</p>
+                    </div>
+                    <div class="col-6 info-img">
+                        <img src="images/1.jpg" alt="" >
+                    </div>
+                </div>
         </section>
         <section id="information">
             <h2>Information</h2>
@@ -78,11 +137,12 @@ $email = $_SESSION['user']['email'];
     <!-- Footer End -->
 
     <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <!-- AOS js -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
