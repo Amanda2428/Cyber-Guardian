@@ -38,9 +38,9 @@ $email = $_SESSION['user']['email'];
                         <div class="content px-2 gap-2 d-flex flex-column justify-content-center text-center">
                             <h3 data-aos="fade-up" class="mb-3"><b>Our Aims</b></h3>
                             <p data-aos="fade-up">
-                                Our aim is to educate and empower individuals, especially teenagers,
-                                to navigate the digital world safely. We strive to provide comprehensive
-                                resources and guidance to help people understand the importance of online safety and how to protect themselves from potential threats.
+                            At Cyber Guardian, our aim is to empower children and parents 
+                            with the knowledge and tools they need to navigate the online world safely. We are dedicated to creating a secure digital environment
+                            where families can explore, learn, and communicate without fear.
                             </p>
 
                         </div>
@@ -55,31 +55,34 @@ $email = $_SESSION['user']['email'];
                 <div class="card rounded-4">
                     <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title"><strong>Empowering Families: The 'Stay Safe Online' Campaign</strong></h5>
+                        <p class="card-text ">Our recent event brought together families and experts to explore digital safety through interactive workshops and expert panels, 
+                            boosting confidence and awareness in online practices.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Celebrated in July</small>
+                        <small class="text-muted">Celebrated in April 24</small>
                     </div>
                 </div>
                 <div class="card rounded-4">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title"><strong>Cyber Guardian's Latest Event: A Success Story</strong></h5>
+                        <p class="card-text">We recently celebrated our school event, focusing on the risks of social media for children. Through engaging activities and discussions, students learned about 
+                            online dangers and how to stay safe in the digital world.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Celebrated in July</small>
+                        <small class="text-muted">Celebrated in June 3</small>
                     </div>
                 </div>
                 <div class="card rounded-4">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title"><strong>Cyber Guardian's Latest Event: Tackling Cyberbullying</strong></h5>
+                        <p class="card-text">Our school event focused on listening to students' experiences with cyberbullying and offering free solutions. We provided tools and strategies 
+                            to help children navigate and resolve online conflicts safely.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                        <small class="text-muted">Celebrated in July 1</small>
                     </div>
                 </div>
             </div>

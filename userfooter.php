@@ -15,7 +15,7 @@
                 <div class="col-lg-3 col-md-6">
 
                     <ul>
-                        <h4 class="news"><strong>All Contacts</strong></h4>
+                        <h4 class="news"><strong>All Content</strong></h4>
                         <li>
                             <i class="fa-solid fa-chevron-right"></i>
                             <a href="home.php">Home</a>
