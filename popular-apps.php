@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-
 <?php
 session_start();
 $email = $_SESSION['user']['email'];
 include("dbconnect.php");
 
-if (isset($_GET['search'])) :
+if (isset($_GET['search'])) {
   $table = $_GET['table'];
   $keyword = $_GET['keyword'];
-  $sql1 = "SELECT * from $table WHERE name LIKE '%$keyword%'";
-else :
-  $sql1 = "SELECT * from socialmediaapps";
-endif;
-$result = $conn->query($sql1);
+  $sql1 = "SELECT * FROM $table WHERE name LIKE '%$keyword%'";
+} else {
+  $sql1 = "SELECT * FROM socialmediaapps";
+}
 
+$result = $conn->query($sql1);
 ?>
 <html lang="en">
 
@@ -36,49 +35,52 @@ $result = $conn->query($sql1);
   <?php include("usernav.php"); ?>
   <!-- Navbar End -->
   <header>
-    <h1>Online Safety Campaign</h1>
-    <!-- Custom Cursors and 3D Illustrations can be added here -->
+    <h1 class="mt-3"><strong>Most Popular Social Media Apps</strong></h1>
   </header>
 
   <main>
     <section id="popular-apps">
-      <h2>Most Popular Social Media Apps</h2>
-      <?php if (isset($_GET['search'])) : ?>
-        <h3>Search result on : <?= $keyword ?></h3>
-        <button>
-          <a href="popular-apps.php">Clear Search</a>
-        </button>
-        <?php
-      endif;
-      if ($result->num_rows > 0) {
-
-        while ($row = $result->fetch_assoc()) {
-        ?>
-          <!--  Service 1 -->
-          <div class="web-service">
-            <h3><?php echo $row['name']; ?></h3>
-            <p><img src="<?php echo "images\\" . $row['logo']; ?>" width="100px" height="100px"></p>
-            <p>
-              <a href="<?php echo $row['link']; ?>"> Facebook Login </a>
-            </p>
-            <p><strong><a href="<?php echo $row['privacylink']; ?>"> Privacy Settings </a></strong> </p>
-
-          </div>
-      <?php
-        }
-      } else {
-        echo isset($_GET['search']) ? "<p>Nothing found on $keyword. </p>" : "<p>No results.</p>";
-      }
-      ?>
-
-
+      <div class="container text-center mt-5">
+        <?php if (isset($_GET['search'])) : ?>
+          <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
+            <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
+        <?php endif; ?>
+        
+        <div class="row" data-aos="fade-up">
+          <?php
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+          ?>
+              <div class="col-md-4 mb-4">
+                <div class="app-card">
+                  <img src="<?php echo "images/" . htmlspecialchars($row['logo']); ?>" alt="App Logo" class="app-image">
+                  <h3 class="mt-2"><strong><?php echo htmlspecialchars($row['name']); ?></strong></h3>
+                  <div class="mt-3  ">
+                    <a href="<?php echo htmlspecialchars($row['link']); ?>" class="btn btn-primary button w-50">App Link</a>
+                    <a href="<?php echo htmlspecialchars($row['privacylink']); ?>" class="btn btn-secondary button w-50">Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+          <?php
+            }
+          } else {
+            if (isset($_GET['search'])) {
+              echo "<p>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
+            } else {
+              echo "<p>No results.</p>";
+            }
+          }
+          ?>
+        </div>
+      </div>
     </section>
   </main>
 
   <?php include("userfooter.php") ?>
-  <!-- bootstrap -->
+  
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <!-- AOS js -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

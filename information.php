@@ -36,7 +36,7 @@ $email = $_SESSION['user']['email'];
                     <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
                         <div class="content px-2 gap-2 d-flex flex-column justify-content-center text-center">
                             <h3 data-aos="fade-up" class="mb-3"><b> Welcome to Cyber Guradian</b></h3>
-                            <p data-aos="fade-up">
+                            <p data-aos="fade-up" class="fs-5">
                                 Cyber Guardian empowers teenagers to navigate the online world safely through our impactful campaigns. We promote awareness of digital risks, foster positive interactions, and provide resources for responsible behavior.
                                 Join us in creating a secure online environment for young people everywhere.
                             </p>
@@ -80,8 +80,10 @@ $email = $_SESSION['user']['email'];
                 <div class="card rounded-4">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"><strong>COur "Stay Safe, Stay Smart" campaign educates teens on online privacy and digital footprints. Through workshops, social media challenges, and community activities, we empower them to make informed decisions,
-                                ensuring a safe digital environment and promoting responsible online behavior.</p>
+                        <h5 class="card-title"><strong>Cyber Guardian's Latest Event: Tackling Cyberbullying</strong></h5>
+                        <p class="card-text">Our school event focused on listening to students' experiences with cyberbullying and offering free solutions. We provided tools and strategies to help
+                            children navigate and resolve online conflicts safely.</p>
+
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Celebrated in July 1</small>
@@ -91,24 +93,25 @@ $email = $_SESSION['user']['email'];
 
         </section>
         <section id="information" class="mt-5">
-            <div class="row text-center d-flex align-items-center justify-content-center ">
-                <div class="col-6">
-                    <h1><strong>Our Aims</strong></h1>
-                    <p>At Cyber Guardian, our aim is to empower children and parents
-                        with the knowledge and tools they need to navigate the online world safely. We are dedicated to creating a secure digital environment
-                        where families can explore, learn, and communicate without fear.
-                        Welcome to the Information page of Cyber Guardian. </p>
-                    <hr>
-                    <h1><strong>Our Mission</strong></h1>
-                    <p>Our mission is to empower individuals with the knowledge and
-                        tools necessary to stay safe online. We aim to raise awareness
-                        about potential online threats and promote responsible digital
-                        behavior to ensure a secure and positive internet experience for everyone.</p>
-                </div>
-                <div class="col-6 info-img">
-                    <img src="images/1.jpg" alt="">
+            <div class="web-service">
+                <div class="row text-center d-flex align-items-center justify-content-center ">
+                    <div class="col-6" data-aos="fade-up">
+                        <h1><strong>Our Aims</strong></h1>
+                        <p>At Cyber Guardian, our aim is to empower children and parents
+                            with the knowledge and tools they need to navigate the online world safely. We are dedicated to creating a secure digital environment
+                            where families can explore, learn, and communicate without fear.
+                            Welcome to the Information page of Cyber Guardian. </p>
+                        <hr>
+                        <h1><strong>Our Mission</strong></h1>
+                        <p>"Stay Safe, Stay Smart" campaign educates teens on online privacy and digital footprints. Through workshops, social media challenges, and community activities, we empower them to make informed decisions,
+                            ensuring a safe digital environment and promoting responsible online behavior.</p>
+                    </div>
+                    <div class="col-6 info-img" data-aos="fade-left">
+                        <img src="images/1.jpg" alt="">
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
     <!-- Footer start -->
