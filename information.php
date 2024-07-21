@@ -25,7 +25,6 @@ $email = $_SESSION['user']['email'];
     <!-- Navbar End -->
     <header>
         <h1 class="mt-3"><strong>Online Safety Campaign</strong></h1>
-        <!-- Custom Cursors and 3D Illustrations can be added here -->
     </header>
     <main>
         <section id="about-us" class="about-us">
@@ -36,11 +35,10 @@ $email = $_SESSION['user']['email'];
                     </div>
                     <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
                         <div class="content px-2 gap-2 d-flex flex-column justify-content-center text-center">
-                            <h3 data-aos="fade-up" class="mb-3"><b>Our Aims</b></h3>
+                            <h3 data-aos="fade-up" class="mb-3"><b> Welcome to Cyber Guradian</b></h3>
                             <p data-aos="fade-up">
-                            At Cyber Guardian, our aim is to empower children and parents 
-                            with the knowledge and tools they need to navigate the online world safely. We are dedicated to creating a secure digital environment
-                            where families can explore, learn, and communicate without fear.
+                                Cyber Guardian empowers teenagers to navigate the online world safely through our impactful campaigns. We promote awareness of digital risks, foster positive interactions, and provide resources for responsible behavior.
+                                Join us in creating a secure online environment for young people everywhere.
                             </p>
 
                         </div>
@@ -49,14 +47,19 @@ $email = $_SESSION['user']['email'];
             </div>
         </section>
         <section id="aim">
-
-            <h1 class="text-center p-5"><strong>Latest Campaign</strong></h1>
-            <div class="card-group">
+            <div class="container-fluid mission-section  ">
+                <h1 class="mission-title ">Latest Campaign: <strong class="headcolor">"Stay Safe, Stay Smart" </strong></h1>
+                <p class="mission-text" data-aos="fade-up">
+                    Our latest campaign, "Stay Safe, Stay Smart," aims to educate teenagers about the critical importance of online privacy and the lasting impact of their digital footprints. As technology becomes an integral part of daily life, understanding how to protect personal information and navigate the digital world responsibly is essential. Through interactive workshops, engaging social media challenges, and community-building activities, we strive to empower young individuals to make informed decisions
+                    online, fostering a safe and supportive environment for everyone.
+                </p>
+            </div>
+            <div class="card-group" data-aos="fade-up">
                 <div class="card rounded-4">
                     <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><strong>Empowering Families: The 'Stay Safe Online' Campaign</strong></h5>
-                        <p class="card-text ">Our recent event brought together families and experts to explore digital safety through interactive workshops and expert panels, 
+                        <p class="card-text ">Our recent event brought together families and experts to explore digital safety through interactive workshops and expert panels,
                             boosting confidence and awareness in online practices.</p>
                     </div>
                     <div class="card-footer">
@@ -67,7 +70,7 @@ $email = $_SESSION['user']['email'];
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><strong>Cyber Guardian's Latest Event: A Success Story</strong></h5>
-                        <p class="card-text">We recently celebrated our school event, focusing on the risks of social media for children. Through engaging activities and discussions, students learned about 
+                        <p class="card-text">We recently celebrated our school event, focusing on the risks of social media for children. Through engaging activities and discussions, students learned about
                             online dangers and how to stay safe in the digital world.</p>
                     </div>
                     <div class="card-footer">
@@ -77,68 +80,40 @@ $email = $_SESSION['user']['email'];
                 <div class="card rounded-4">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"><strong>Cyber Guardian's Latest Event: Tackling Cyberbullying</strong></h5>
-                        <p class="card-text">Our school event focused on listening to students' experiences with cyberbullying and offering free solutions. We provided tools and strategies 
-                            to help children navigate and resolve online conflicts safely.</p>
+                        <h5 class="card-title"><strong>COur "Stay Safe, Stay Smart" campaign educates teens on online privacy and digital footprints. Through workshops, social media challenges, and community activities, we empower them to make informed decisions,
+                                ensuring a safe digital environment and promoting responsible online behavior.</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Celebrated in July 1</small>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid mission-section  ">
-                <h1 class="mission-title "data-aos="fade-up" class="mb-3"><strong>Our Mission</strong></h1>
-                <p class="mission-text" data-aos="fade-up">
-                    Our mission is to empower individuals with the knowledge and
-                    tools necessary to stay safe online. We aim to raise awareness
-                    about potential online threats and promote responsible digital
-                    behavior to ensure a secure and positive internet experience for everyone.
-                </p>
-            </div>
+
         </section>
-        <section id="information">
-                <div class="row text-center d-flex align-items-center justify-content-center ">
-                    <div class="col-6">
-                        <h1>Hi</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat iure minus reprehenderit magnam dolore fuga consequuntur fugiat quo officiis? Corporis ipsa pa
-                            riatur eligendi in rem repellat illo quae quia.</p>
-                            <hr>
-                        <h1>Hi</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat iure minus reprehenderit magnam dolore fuga consequuntur fugiat quo officiis? Corporis ipsa pa
-                            riatur eligendi in rem repellat illo quae quia.</p>
-                    </div>
-                    <div class="col-6 info-img">
-                        <img src="images/1.jpg" alt="" >
-                    </div>
+        <section id="information" class="mt-5">
+            <div class="row text-center d-flex align-items-center justify-content-center ">
+                <div class="col-6">
+                    <h1><strong>Our Aims</strong></h1>
+                    <p>At Cyber Guardian, our aim is to empower children and parents
+                        with the knowledge and tools they need to navigate the online world safely. We are dedicated to creating a secure digital environment
+                        where families can explore, learn, and communicate without fear.
+                        Welcome to the Information page of Cyber Guardian. </p>
+                    <hr>
+                    <h1><strong>Our Mission</strong></h1>
+                    <p>Our mission is to empower individuals with the knowledge and
+                        tools necessary to stay safe online. We aim to raise awareness
+                        about potential online threats and promote responsible digital
+                        behavior to ensure a secure and positive internet experience for everyone.</p>
                 </div>
-        </section>
-        <section id="information">
-            <h2>Information</h2>
-            <p>
-                Welcome to the Information page of the Online Safety Campaign. Here,
-                we provide details about our social media campaigns and their aims and
-                vision to keep teenagers safe online.
-            </p>
-            <h3>Social Media Campaigns</h3>
-            <p>
-                Our campaigns focus on empowering teenagers to navigate the digital
-                world safely. We aim to create awareness about online risks and
-                promote responsible use of social media platforms.
-            </p>
-            <h3>Aims and Vision</h3>
-            <p>
-                Our primary aim is to foster a secure online environment for
-                teenagers, promoting positive interactions and preventing
-                cyberbullying. We envision a future where young individuals can
-                explore the digital space without compromising their safety and
-                well-being.
-            </p>
+                <div class="col-6 info-img">
+                    <img src="images/1.jpg" alt="">
+                </div>
+            </div>
         </section>
     </main>
     <!-- Footer start -->
     <?php include("userfooter.php"); ?>
     <!-- Footer End -->
-
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- AOS js -->
