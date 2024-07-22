@@ -11,12 +11,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Style CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <?php
 session_start();
 $email = $_SESSION['user']['email'];
+include("dbconnect.php");
+
+if (isset($_GET['search'])) {
+  $table = $_GET['table'];
+  $keyword = $_GET['keyword'];
+  $sql1 = "SELECT * FROM $table WHERE heading LIKE '%$keyword%'";
+} else {
+  $sql1 = "SELECT * FROM howparenthelp";
+}
+
+$result = $conn->query($sql1);
 ?>
 
 <body>
@@ -24,12 +37,53 @@ $email = $_SESSION['user']['email'];
   <?php include("usernav.php"); ?>
   <!-- Navbar End -->
   <header>
-    <h1>Online Safety Campaign</h1>
+  <h1 class="mt-3"><strong>How Parents Can Help</strong></h1>
     <!-- Custom Cursors and 3D Illustrations can be added here -->
   </header>
 
   <main>
     <section id="parents-help">
+      <div class="container mb-5">
+        <?php if (isset($_GET['search'])) : ?>
+          <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
+          <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
+        <?php endif; ?>
+
+        
+          <?php
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+          ?>
+          <div class="row swiper-contain">
+          <div class="col w-50 ">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="<?php echo "images/" . htmlspecialchars($row['image1']); ?>" alt=""></div>
+                    <div class="swiper-slide"><img src="<?php echo "images/" . htmlspecialchars($row['image2']); ?>" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex flex-column justify-content-center">
+                <h2><strong><?php echo htmlspecialchars($row['heading']); ?></strong></h2>
+                <p><?php echo htmlspecialchars($row['messaging']); ?></p>
+                <p class="text-uppercase">Publish Date: <?php echo htmlspecialchars($row['date']); ?></p>
+              </div>
+          </div>
+            
+          <?php
+            }
+          } else {
+            if (isset($_GET['search'])) {
+              echo "<p>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
+            } else {
+              echo "<p>No results.</p>";
+            }
+          }
+          ?>
+        
+      </div>
+    </section>
+    <section id="parents-help 2">
       <h2>How Parents Can Help</h2>
       <p>
         Discover top tips for parents to support healthy teen use of social
@@ -65,6 +119,32 @@ $email = $_SESSION['user']['email'];
   <script>
     AOS.init();
   </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
+  <!-- <script>
+    var swiper2 = new Swiper(".mySwiper2", {
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-120%", 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ["120%", 0, -500],
+        },
+      },
+    });
+  </script> -->
 </body>
 
 </html>

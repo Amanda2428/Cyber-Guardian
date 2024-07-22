@@ -49,7 +49,7 @@ if (isset($_POST['btnUpdate'])) {
   $id = $conn->real_escape_string($_POST['id']);
   $heading = $conn->real_escape_string($_POST['heading']);
   $messaging = $conn->real_escape_string($_POST['messaging']);
-  $sql = "UPDATE howparenthelp SET description='$des";
+  $sql = "UPDATE howparenthelp SET heading='$heading', messaging='$messaging'";
 
   if (isset($_FILES["image1"]) && $_FILES["image1"]["error"] == 0) {
     $Filename1 = $_FILES["image1"]["name"];
@@ -61,10 +61,10 @@ if (isset($_POST['btnUpdate'])) {
     $Filename2 = $_FILES["image2"]["name"];
     $Filepath2 = $_FILES["image2"]["tmp_name"];
     move_uploaded_file($Filepath2, "images/" . $Filename2);
-    $sql .= ", image1='$Filename2'";
-  } else {
-    $sql = "UPDATE howparenthelp SET heading='$heading', messaging='$messaging' WHERE id='$id'";
+    $sql .= ", image2='$Filename2'";
   }
+
+  $sql .= " WHERE id='$id'";
 
   if ($conn->query($sql) === TRUE) {
     header("location:howparenthelpSetup.php");
@@ -72,6 +72,7 @@ if (isset($_POST['btnUpdate'])) {
     echo "Error: " . $conn->error;
   }
 }
+
 // Delete Query
 if (isset($_GET['deleteid'])) {
   $did = $_GET['deleteid'];
@@ -181,7 +182,7 @@ if (isset($_GET['editid'])) {
             <th scope="col">Image1</th>
             <th scope="col">Image2</th>
             <th scope="col">Heading</th>
-            <th scope="col">Content</th>
+            <th scope="col">Messaging</th>
             <th scope="col">Date</th>
             <th scope="col">Action</th>
           </tr>
