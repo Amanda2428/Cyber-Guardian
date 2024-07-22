@@ -42,6 +42,16 @@ $result = $conn->query($sql1);
   </header>
 
   <main>
+    <div class="row d-flex flex-column p-5" >
+      <div class="col text-center">
+        <img src="./images/parent.png" alt="">
+      </div>
+      <div class="col text-center">
+        <h3><strong>hjfhfhfjuifhfjhjf</strong></h3>
+        <p>Helping children protect themselves while protecting their innocence through music, songs, lessons and fun
+           activities - all for zero cost to program presenters.</p>
+      </div>
+    </div>
     <section id="parents-help">
       <div class="container mb-5">
         <?php if (isset($_GET['search'])) : ?>
