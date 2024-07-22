@@ -41,12 +41,12 @@ endif;
         </div>
         <form action="#" method="POST" class="form-inline my-2 d-flex flex-row  align-items-center justify-content-center gap-3 mr-20 form-responsive w-75">
             <input name="searchKeyWord" class="form-control mr-sm-2 w-100" type="search" placeholder="Search" aria-label="Search" required>
-            <select name="searchIn" class="form-control w-25" required>
+            <select name="searchIn" class="form-control w-50" required>
                 <option value="#" disabled selected>↓</option>
                 <option value="home.php?search=1&table=newsletter">Newsletter</option>
                 <option value="home.php?search=1&table=services">Service</option>
-                <option value="popular-apps.php?search=1&table=socialmediaapps">Social Media Apps</option>
-                <option value="popular-apps.php?search=1&table=howparenthelp">How Parents Help</option>
+                <option value="popular-apps.php?search=1&table=socialmediaapps">Social-Media Apps</option>
+                <option value="popular-apps.php?search=1&table=howparenthelp">Parents Help</option>
             </select>
             <button name="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
