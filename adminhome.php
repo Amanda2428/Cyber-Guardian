@@ -36,7 +36,30 @@ $email = $_SESSION['user']['email'];
   <main>
     <section id="home">
       <h2>Welcome to Our Campaign</h2>
-
+      <div class="row ">
+        <div class="col admin-advice">
+          <div class="admin-text">
+            <h2><strong>Services</strong></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consectetur provident quos dolorum iusto, perferendis ratione officia ad obcaecati quibusdam sunt dicta, aut quis dolor fuga nostrum aspernatur. Voluptatibus, minima?</p>
+            <p>Current Total Services</p>
+            <button type="button" class="btn btn-success">Services</button>
+          </div>
+          <div class="admin-img">
+            <img src="images/support.png" alt="" class="">
+          </div>
+        </div>
+        <div class="col admin-advice">
+          <div class="admin-text">
+            <h2><strong>Services</strong></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consectetur provident quos dolorum iusto, perferendis ratione officia ad obcaecati quibusdam sunt dicta, aut quis dolor fuga nostrum aspernatur. Voluptatibus, minima?</p>
+            <p>Current Total Services</p>
+            <button type="button" class="btn btn-success">Services</button>
+          </div>
+          <div class="admin-img">
+            <img src="images/support.png" alt="" class="">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
