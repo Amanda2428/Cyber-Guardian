@@ -37,35 +37,38 @@ $result = $conn->query($sql1);
   <?php include("usernav.php"); ?>
   <!-- Navbar End -->
   <header>
-  <h1 class="mt-3"><strong>How Parents Can Help</strong></h1>
+    <h1 class="mt-3"><strong>How Parents Can Help</strong></h1>
     <!-- Custom Cursors and 3D Illustrations can be added here -->
   </header>
 
   <main>
-    <div class="row d-flex flex-column p-5" >
-      <div class="col text-center">
-        <img src="./images/parent.png" alt="">
+    <section id="parent-head">
+      <div class="row d-flex flex-column p-5 align-items-center">
+        <div class="col parent-img" data-aos="fade-right">
+          <img src="./images/parent.png" alt="">
+        </div>
+        <div class="col parent-note" data-aos="fade-up">
+          <h2 class="mb-3"><strong>Welcome to the My Body Is My Body Musical Child Abuse Prevention Program</strong></h2>
+          <p>Helping children protect themselves while protecting their innocence through music, songs, lessons and fun
+            activities - all for zero cost to program presenters.</p>
+        </div>
       </div>
-      <div class="col text-center">
-        <h3><strong>hjfhfhfjuifhfjhjf</strong></h3>
-        <p>Helping children protect themselves while protecting their innocence through music, songs, lessons and fun
-           activities - all for zero cost to program presenters.</p>
-      </div>
-    </div>
+
+      
+    
+    </section>
     <section id="parents-help">
       <div class="container mb-5">
         <?php if (isset($_GET['search'])) : ?>
           <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
           <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
         <?php endif; ?>
-
-        
-          <?php
-          if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-          ?>
-          <div class="row swiper-contain">
-          <div class="col w-50 ">
+        <?php
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+        ?>
+            <div class="row swiper-contain" data-aos="fade-up">
+              <div class="col w-50 ">
                 <div class="swiper mySwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="<?php echo "images/" . htmlspecialchars($row['image1']); ?>" alt=""></div>
@@ -78,19 +81,31 @@ $result = $conn->query($sql1);
                 <p><?php echo htmlspecialchars($row['messaging']); ?></p>
                 <p class="text-uppercase">Publish Date: <?php echo htmlspecialchars($row['date']); ?></p>
               </div>
-          </div>
-            
-          <?php
-            }
-          } else {
-            if (isset($_GET['search'])) {
-              echo "<p>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
-            } else {
-              echo "<p>No results.</p>";
-            }
+            </div>
+              
+      <div class=" container-fluid row d-flex p-3 align-items-center ">
+        <div class="col-sm logo-line">
+          <hr >
+        </div>
+        <div class="col-sm logo-image text-center ">
+        <img decoding="async" src="images/logo.png" alt="" />
+        </div>
+        <div class="col-sm logo-line">
+          <hr>
+        </div>
+      </div>  
+
+        <?php
           }
-          ?>
-        
+        } else {
+          if (isset($_GET['search'])) {
+            echo "<p>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
+          } else {
+            echo "<p>No results.</p>";
+          }
+        }
+        ?>
+
       </div>
     </section>
     <section id="parents-help 2">
