@@ -86,17 +86,14 @@ if (isset($_GET['editid'])) {
   <?php include("adminnav.php"); ?>
   <!-- Navbar end -->
   <header>
-    <h1 class="mt-3"><strong>NewsLetter Set up </strong></h1>
+    <h1 class="mt-3"><strong>NewsLetter Set Up </strong></h1>
     <!-- Custom Cursors and 3D Illustrations can be added here -->
   </header>
 
   <main>
     <section id="contact" class="shadow back-color">
-      <h2>Contact Us</h2>
-      <p>
-        Feel free to reach out to us using the contact form below. We
-        appreciate your feedback and inquiries.
-      </p>
+      <h2>Set Up In Here!</h2>
+      <p>Welcome to the <strong>Newsletter Set Up</strong> section. Here, you can create engaging content to keep our community informed about the latest online safety trends. Provide a catchy title, compelling content, and an image to capture interest.</p>
       <!-- Contact Form -->
       <form action="#" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">

@@ -94,11 +94,8 @@ if (isset($_GET['editid'])) {
 
   <main>
     <section id="contact" class="shadow back-color">
-      <h2>Social Media Apps</h2>
-      <p>
-        Feel free to reach out to us using the contact form below. We
-        appreciate your feedback and inquiries.
-      </p>
+      <h2>Set Up In Here!</h2>
+      <p>Use this section to add information about social media apps, focusing on privacy and safety features. Provide the app name, an image, a link to the app, and a privacy policy link.</p>
       <!-- Contact Form -->
       <form action="#" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">

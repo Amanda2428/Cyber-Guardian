@@ -108,11 +108,8 @@ if (isset($_GET['editid'])) {
 
   <main>
     <section id="contact" class="shadow back-color">
-      <h2>Contact Us</h2>
-      <p>
-        Feel free to reach out to us using the contact form below. We
-        appreciate your feedback and inquiries.
-      </p>
+      <h2>Set Up in Here!</h2>
+      <p>This section allows you to provide resources and guidance for parents to help them support their children in maintaining safe online habits. Add a clear heading, a helpful message, and relevant images.</p>
       <!-- Contact Form -->
       <form action="#" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
