@@ -1080,6 +1080,32 @@ text-align: center;
 margin: 0 auto; 
 font-size: 20px;
 }
+#livestreaming-tips .tips-container {
+  padding: 100px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+#livestreaming-tips .download-btn, .share-btn {
+  margin-top: 10px;
+}
+#livestreaming-tips .tips-button .btn-danger:hover{
+  background-color:#198754;
+  border: 1px solid #198754;
+}
+#livestreaming-tips .tips-button .btn-success:hover{
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+}
+#livestreaming-tips .img-placeholder {
+  width: 100%;
+  height: auto;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
 @media (max-width: 768px) {
   .swiper {
     width: 100%;

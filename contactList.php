@@ -47,7 +47,7 @@ $result = $conn->query($sql1);
       <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search..." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <p>Guiding teenagers to explore the digital world securely.</p>
+    <p class="mt-4">Guiding teenagers to explore the digital world securely.</p>
   </div>
   <main>
     <!-- Table Start -->
