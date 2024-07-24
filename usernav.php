@@ -46,7 +46,7 @@ endif;
                 <option value="home.php?search=1&table=newsletter">Newsletter</option>
                 <option value="home.php?search=1&table=services">Service</option>
                 <option value="popular-apps.php?search=1&table=socialmediaapps">Social-Media Apps</option>
-                <option value="popular-apps.php?search=1&table=howparenthelp">Parents Help</option>
+                <option value="parents-help.php?search=1&table=howparenthelp">Parents Help</option>
             </select>
             <button name="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>

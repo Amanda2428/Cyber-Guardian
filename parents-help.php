@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,7 +60,7 @@ $result = $conn->query($sql1);
       <div class="container mb-5">
         <?php if (isset($_GET['search'])) : ?>
           <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
-          <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
+          <a href="parents-help.php" class="btn btn-primary button">Clear Search</a>
         <?php endif; ?>
         <?php
         if ($result->num_rows > 0) {

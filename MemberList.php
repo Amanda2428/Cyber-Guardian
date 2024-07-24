@@ -3,8 +3,13 @@
 include('dbconnect.php');
 session_start();
 $email = $_SESSION['user']['email'];
+if(isset($_GET['btnSearch'])) : 
+  $keyword = $_GET['keyword'];
+  $sql1 = "SELECT * from member WHERE email LIKE '%$keyword%' OR name LIKE '%$keyword%'";
+else : 
+  $sql1 = "SELECT * from member";
+endif;
 
-$sql1 = "SELECT * from member";
 $result = $conn->query($sql1);
 
 if (isset($_GET['changeRole'])) :
@@ -48,10 +53,16 @@ endif;
   </header>
   <div class="searching container d-flex flex-column align-items-center  ">
     <form class="form-inline my-2  d-flex flex-row gap-3 mr-20  form-responsive">
-      <input class="form-control mr-sm-2 w-100 " type="search" placeholder="Search..." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2 w-100" name="keyword" type="search" placeholder="Search..." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" name="btnSearch" type="submit">Search</button>
     </form>
     <p class="mt-4">Guiding teenagers to explore the digital world securely.</p>
+    <?php if(isset($_GET['btnSearch'])) : ?>
+      <p>Search result on: <span class="fw-bold"><?= $keyword ?></span></p>
+      <button type="button" class="btn btn-outline-danger ms-2">
+        <a class="text-decoration-none text-danger" href="MemberList.php">Clear Search</a>
+      </button>
+    <?php endif; ?>
   </div>
   <main>
     <!-- Table Start -->
