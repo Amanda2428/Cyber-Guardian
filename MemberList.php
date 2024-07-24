@@ -58,11 +58,12 @@ endif;
     </form>
     <p class="mt-4">Guiding teenagers to explore the digital world securely.</p>
     <?php if(isset($_GET['btnSearch'])) : ?>
-      <p>Search result on: <span class="fw-bold"><?= $keyword ?></span></p>
-      <button type="button" class="btn btn-outline-danger ms-2">
-        <a class="text-decoration-none text-danger" href="MemberList.php">Clear Search</a>
-      </button>
-    <?php endif; ?>
+  <p>Search result on: <span class="fw-bold"><?= $keyword ?></span></p>
+  <a href="MemberList.php" class="btn btn-danger ms-2 text-decoration-none">
+    Clear Search
+  </a>
+<?php endif; ?>
+
   </div>
   <main>
     <!-- Table Start -->

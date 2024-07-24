@@ -57,12 +57,7 @@ $totalSocialmedia = $row['total'];
     <div class="admin-container">
       <p class="mt-4 head-text d-flex flex-column align-items-center">Welcome to the admin dashboard! Here, you can manage our online safety resources, services, 
         and support to empower our community in navigating the digital world safely.</p>
-      <div class="searching container d-flex flex-column align-items-center  ">
-        <form class="form-inline my-2  d-flex flex-row gap-3 mr-20  form-responsive">
-          <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search..." aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+      
     </div>
   </header>
 
@@ -70,7 +65,7 @@ $totalSocialmedia = $row['total'];
   <main>
     <section id="admin-home">
       <div class="container-fluid">
-        <h2><strong>Setting up of Cyber Guardian Website</strong></h2>
+        <h2><strong>Setting Guidelines of Cyber Guardian Website</strong></h2>
         <div class="row ">
           <div class="col admin-advice">
             <div class="admin-text">

@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Streaming Tips</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .tips-container {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-        }
-        .download-btn, .share-btn {
-            margin-top: 10px;
-        }
-        .img-placeholder {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            background-color: #d3d3d3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Safety Campaign</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
+<?php
+include ('dbconnect.php');
+session_start();
+?>
+
 <body>
+  <nav>
+    <ul>
+      <li class="link"><a href="home.php">Home</a></li>
+      <li class="link"><a href="information.php">Information</a></li>
+      <li>
+        Campaigns
+        <ul>
+          <li class="link"><a href="popular-apps.php">Popular Apps</a></li>
+          <li class="link"><a href="parents-help.php">Parents Help</a></li>
+          <li class="link"><a href="livestreaming.php">Livestreaming</a></li>
+        </ul>
+      </li>
+      <li class="link"><a href="contact.php">Contact</a></li>
+      <li class="link"><a href="legislation.php">Legislation</a></li>
+      <li class="link"><a href="logout.php">Logout</a></li>
+    </ul>
+    <form action="https://www.google.com/search" method="get" class="search-input">
+      <input type="text" id="search" name="q" placeholder="Search Google..." />
+      <button type="submit">Search</button>
+    </form>
+  </nav>
 
-<div class="container mt-5">
-    <div class="row align-items-center tips-container">
-    <div class="col-md-4 text-center">
-            <div class="img-placeholder">
-                <!-- Replace with an actual image -->
-                <img src="./images/adminPanelApp.jpg" alt="Camera icon" class="img-fluid">
+  <header>
+    <h1 class="text-center my-5">Online Safety Campaign</h1>
+  </header>
+
+  <main>
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Legislation and Guidance</h2>
+              <p class="card-text">
+                Stay informed about the legal aspects and best practices related to online safety. Understanding the
+                legal framework and adhering to best practices is crucial for ensuring a safer online experience for
+                everyone. Understanding the legislation surrounding online safety is crucial for creating a safer
+                digital environment.
+              </p>
             </div>
+          </div>
         </div>
-        <div class="col-md-8">
-            <h2>Top tips for live streaming & vlogging</h2>
-            <h5>A parent’s guide to keep children safe</h5>
-            <p>If your child wants to live stream or vlog, help them do so safely with our top tips below.</p>
-            <button class="btn btn-danger download-btn">Download Tips</button>
-            <button class="btn btn-success share-btn">Share</button>
-        </div>
-       
-    </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="col-md-12 mb-6">
+          <div class="card shadow-sm">
+            <img src="images/bully4.jpg" class="card-img-top" alt="Legislation">
+            <div class="card-body">
+              <p class="card-text">
+                Being aware of the laws that govern online safety is important. Here are some key pieces of legislation:
+              </p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Mandates quick removal of harmful content and protection for children</li>
+                <li class="list-group-item">Ensures secure handling of personal data and user control.</li>
+                <li class="list-group-item">Requires parental consent for collecting info from children under 13.</li>
+                <li class="list-group-item">Handles copyright issues and removal of unauthorized content.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">Legislation and Guidance</h2>
+              <p class="card-text">
+                Stay informed about the legal aspects and best practices related to online safety. Understanding the
+                legal framework and adhering to best practices is crucial for ensuring a safer online experience for
+                everyone. Understanding the legislation surrounding online safety is crucial for creating a safer
+                digital environment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <?php
+  include ("footer.php");
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
