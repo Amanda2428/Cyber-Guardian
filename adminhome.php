@@ -70,7 +70,7 @@ $totalSocialmedia = $row['total'];
   <main>
     <section id="admin-home">
       <div class="container-fluid">
-        <h2><strong>Setting up of Cyber Guradian Website</strong></h2>
+        <h2><strong>Setting up of Cyber Guardian Website</strong></h2>
         <div class="row ">
           <div class="col admin-advice">
             <div class="admin-text">
