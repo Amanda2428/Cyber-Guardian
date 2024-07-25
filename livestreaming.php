@@ -25,8 +25,7 @@ $email = $_SESSION['user']['email'];
   <!-- Navbar End -->
   <header>
     <h1 class="m-3"><strong>Online Safety Campaign</strong></h1>
-  </header>
-  <section id="livestreaming-tips">
+    <section id="livestreaming-tips">
     <div class="container-fluid mt-5">
       <div class="row align-items-center tips-container">
         <div class="col-md-5 text-center">
@@ -67,13 +66,11 @@ $email = $_SESSION['user']['email'];
       </div>
     </div>
   </section>
+  </header>
+
 
   <main>
-
-
     <section id="livestreaming">
-
-
       <div class="container-fluid mt-5">
         <hr>
         <h1 class="live-head"><strong>10 tips for live streaming and vlogging safely</strong></h1>
