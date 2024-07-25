@@ -27,7 +27,6 @@
  
   header {
     text-align: center;
-    padding: 10px;
   }
 
   nav {
@@ -1113,6 +1112,32 @@ font-size: 20px;
   align-items: top;
   justify-content: center;
  
+}
+#hero .container-fluid{
+  padding-left: 0px;
+  padding-right:0px ;
+}
+#hero .hero-section {
+  background-image: url('./images/chip.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+.content-section {
+  padding: 40px 0;
+}
+.info-card {
+  background-color: #0c60b4;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.info-card p {
+  margin: 0;
 }
 
 .video-section iframe {

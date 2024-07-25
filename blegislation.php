@@ -44,58 +44,78 @@
 
     </div>
   </nav>
+
   <header>
-    <h1>Online Safety Campaign</h1>
-    <!-- Custom Cursors and 3D Illustrations can be added here -->
-  </header>
+        <section id="hero">
+            <div class="container-fluid">
+                <div class="hero-section">
+                    <h5 class="text-uppercase">Blog Post</h5>
+                    <h1>Showtime for Social Media Laws</h1>
+                    <p>by Anni Carlsson</p>
+                </div>
+            </div>
+        </section>
+    </header>
 
-  <main>
-    <section class="legislation-content">
-      <h2>Legislation and Guidance</h2>
+    <main>
+        <div class="container content-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./images/ph-using.jpg" alt="Social Media" class="img-fluid mb-3 rounded">
+                    <div class="info-card mb-3">
+                        <p>Project Bluebird: Innovation in the (AI)r</p>
+                        <p>📅 June 12, 2024</p>
+                    </div>
+                    <div class="info-card mb-3">
+                        <p>DPDPA 2023 vs. GDPR: A Comparative Analysis of India’s & EU’s Data Privacy Laws</p>
+                        <p>📅 May 15, 2024</p>
+                    </div>
+                    <div class="info-card mb-3">
+                        <p>Post-doc Position – Digital surveillance and technological sovereignty</p>
+                        <p>📅 May 8, 2024</p>
+                    </div>
 
-      <p>
-        Stay informed about the legal aspects and best practices when it comes
-        to online social media use.
-      </p>
+                </div>
+                <div class="col-md-8 web-service fs-6 ">
+                    <h3><strong>From Take-Down Duties to Obligations to Uphold Free Speech</strong></h3>
+                    <p>Calls for harder regulation of social media platforms have echoed worldwide for a while. In particular, the effect of platforms’ content moderation on freedom of expression has recently engaged lawmakers in Europe and the US. What is particularly salient with this fresh wave of social media legislation is that it does not just require platforms to remove specific content. On the contrary, the novel social media laws can demand that platforms do not remove particular content. This blog post will present the recent social media laws adopted in Europe and the US that protect users’
+                        free speech exercise against platforms and discuss the challenges they face in the coming year.</p>
+                    <h3><strong>Platform Laws in the Limelight on Both Sides of the Atlantic</strong></h3>
+                    <p>In Europe, the EU adopted the Digital Services Act (DSA) in 2022. The regulation imposes various duties related to content moderation on social media
+                        platforms and will become fully effective in February 2024.</p>
+                    <br>
+                    <p>There are several ways in which the DSA safeguards users’ free speech interests against platforms. It imposes obligations on platforms to include clear information about content restrictions in their terms of service and pay due regard to free speech rights of users when applying and enforcing these restrictions (Art. 14). Platforms must also provide a statement of reasons to users whose content has been restricted or whose account has been suspended or terminated (Art. 17). Furthermore, platforms are required to set up an internal complaint-handling system, which
+                        nables users to complain about platforms’ decisions to limit their content or accounts (Art. 20).</p>
+                    <br>
+                    <p>In the US, legislative offensives against social media platforms accelerated after the major platforms blocked former president Donald Trump from their services in January 2021 following the storming of the US Capitol in Washington, D.C. Two social media laws that have received the most attention are the bills passed by lawmakers in Florida and Texas in 2021.</p>
 
-      <!-- Information about Legislation and Guidance -->
-      <h3>Relevant Legislation</h3>
-      <p>
-        Understanding the legal framework is crucial. Here are some key pieces
-        of legislation related to online safety:
-      </p>
-      <ul>
-        <li>The Online Safety Act</li>
-        <li>Data Protection Regulations</li>
-        <li>Child Online Privacy Act (COPA)</li>
-        <!-- Add more legislation items as needed -->
-      </ul>
+                    <section class="legislation-content mt-4">
+                        <h3><strong>Legislation and Guidance</strong></h3>
+                        <p>Stay informed about the legal aspects and best practices when it comes to online social media use.</p>
 
-      <h3>Best Practice Guidance</h3>
-      <p>
-        Follow these best practices to ensure a safe and responsible online
-        experience:
-      </p>
-      <ul>
-        <li>Teach responsible social media use from a young age</li>
-        <li>
-          Encourage open communication with children about their online
-          activities
-        </li>
-        <li>
-          Use privacy settings to control the visibility of personal
-          information
-        </li>
-        <li>Report and block inappropriate content or users</li>
-        <!-- Add more best practice guidance items as needed -->
-      </ul>
-    </section>
-    <div id="goTop">
-    <a href="#nav" id="goTopBtn">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-</div>
-  </main>
+                        <h3><strong>Relevant Legislation</strong></h3>
+                        <p>Understanding the legal framework is crucial. Here are some key pieces of legislation related to online safety:</p>
+                        <ul class="arrow-list ">
+                            <li>The Online Safety Act: Protects users from harmful content.</li>
+                            <li>Data Protection Regulations: Ensures privacy and data security.</li>
+                            <li>Child Online Privacy Act (COPA): Protects children's online data.</li>
+                            <li>Digital Services Act (DSA): Regulates platform responsibilities.</li>
+                        </ul>
+                        <img src="./images/law.jpg" alt="Related Topic" class="img-fluid mb-3 rounded">
+                        <h3><strong>Best Practice Guidance</strong></h3>
+                        <p>Follow these best practices to ensure a safe and responsible online experience:</p>
+                        <ul class="arrow-list ">
+                            <li>Teach responsible social media use from a young age.</li>
+                            <li>Encourage open communication with children about their online activities.</li>
+                            <li>Use privacy settings to control the visibility of personal information.</li>
+                            <li>Report and block inappropriate content or users.</li>
+                            <li>Regularly update passwords and use two-factor authentication.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
 
   <!-- Footer Start -->
   <?php include("defaultfooter.php") ?>

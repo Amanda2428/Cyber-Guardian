@@ -17,5 +17,8 @@
         </div>
     </div>
 <!-- Go Top -->
-
+<div id="goTop">
+    <a href="#nav" id="goTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 </footer>
