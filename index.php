@@ -246,11 +246,6 @@ $resSocial = $conn->query($sql3);
     </section>
 
 
-    <div id="goTop">
-    <a href="#nav" id="goTopBtn">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-</div>
   </main>
   <!-- Footer Start -->
   <?php include("defaultfooter.php") ?>

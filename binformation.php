@@ -80,7 +80,7 @@
       </div>
       <div class="card-group" data-aos="fade-up">
         <div class="card rounded-4">
-          <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+          <img class="card-img-top" src="images/Parentonzoom.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><strong>Empowering Families: The 'Stay Safe Online' Campaign</strong></h5>
             <p class="card-text ">Our recent event brought together families and experts to explore digital safety through interactive workshops and expert panels,
@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="card rounded-4">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="images/storytelling.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><strong>Cyber Guardian's Latest Event: A Success Story</strong></h5>
             <p class="card-text">We recently celebrated our school event, focusing on the risks of social media for children. Through engaging activities and discussions, students learned about
@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="card rounded-4">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="images/consult.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><strong>Cyber Guardian's Latest Event: Tackling Cyberbullying</strong></h5>
             <p class="card-text">Our school event focused on listening to students' experiences with cyberbullying and offering free solutions. We provided tools and strategies to help
@@ -131,7 +131,7 @@
               ensuring a safe digital environment and promoting responsible online behavior.</p>
           </div>
           <div class="col-6 info-img" data-aos="fade-left">
-            <img src="images/1.jpg" alt="">
+            <img src="images/logo.png" alt="">
           </div>
         </div>
       </div>

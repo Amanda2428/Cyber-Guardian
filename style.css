@@ -630,7 +630,7 @@ a:hover {
 }
 
 .headcolor{
-  color: white;
+ color: #114578;
 }
 
 .see-more .see-text p {
@@ -864,133 +864,6 @@ font-size: 18px;
 .button {
   margin: 5px;
 }
-  /* Responsive Styles */
-  @media only screen and (max-width: 600px) {
-    nav > ul {
-      flex-direction: column;
-    }
-    nav > ul > li {
-      padding: 10px;
-    }
-    nav {
-      flex-direction: column;
-    }
-  }
-
-
-/* Responsive Styles */
-@media only screen and (max-width: 600px) {
-  nav > ul {
-    flex-direction: column;
-  }
-  nav > ul > li {
-    padding: 10px;
-  }
-  nav {
-    flex-direction: row;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .responsive-img {
-    width: 200px;
-    height: 120px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .responsive-img {
-    width: 150px;
-    height: 90px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .responsive-text {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .responsive-text {
-    font-size: 12px;
-  }
-}
-@media (max-width: 1000px) {
-  .navbar-nav {
-    flex-direction: column !important;
-    align-items: center !important;
-    
-  }
-  .logout a{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  
-  }
-  .form-responsive{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-}
-@media (max-width: 700px){
-  .search{
-    margin-left: 0;
-    margin-right: 0;
-    justify-content: flex-start;
-    }
-}
-@media (max-width: 767px) {
-  .stay-safe-img {
-    display: none; 
-  }
-
-  .stay-safe-online {
-    flex-direction: column;
-  }
-
-  .stay-safe-online div {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 991px) {
-  .blog-div {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .blog-1,
-  .blog-2 {
-      width: 100%;
-  }
-  .blog-1 .card{
-      width: 100%;
-  }
-
-}
-@media(min-width: 763x)
-{
-  .blog-1,
-  .blog-2 {
-      width: 100%;
-  }
-  .blog-1 .card{
-      width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  #information .col-6 {
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-  #information .info-img {
-      max-height: 200px;
-  }
-}
 .swiper {
   margin: 50px auto;
   width: 75%;
@@ -1146,6 +1019,134 @@ font-size: 20px;
   max-height: 350px;
   border: none;
 }
+  /* Responsive Styles */
+  @media only screen and (max-width: 600px) {
+    nav > ul {
+      flex-direction: column;
+    }
+    nav > ul > li {
+      padding: 10px;
+    }
+    nav {
+      flex-direction: column;
+    }
+  }
+
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  nav > ul {
+    flex-direction: column;
+  }
+  nav > ul > li {
+    padding: 10px;
+  }
+  nav {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .responsive-img {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .responsive-img {
+    width: 150px;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .responsive-text {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .responsive-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    
+  }
+  .logout a{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  
+  }
+  .form-responsive{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+@media (max-width: 700px){
+  .search{
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    }
+}
+@media (max-width: 767px) {
+  .stay-safe-img {
+    display: none; 
+  }
+
+  .stay-safe-online {
+    flex-direction: column;
+  }
+
+  .stay-safe-online div {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .blog-div {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .blog-1,
+  .blog-2 {
+      width: 100%;
+  }
+  .blog-1 .card{
+      width: 100%;
+  }
+
+}
+@media(min-width: 763x)
+{
+  .blog-1,
+  .blog-2 {
+      width: 100%;
+  }
+  .blog-1 .card{
+      width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #information .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  #information .info-img {
+      max-height: 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .swiper {
     width: 100%;

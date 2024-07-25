@@ -34,14 +34,14 @@ if (isset($_POST['btnLogin'])) :
     else :
       $wrongPassword = true;
       $_SESSION['login_attempt_time'] = $loginAttemptTime + 1;
-      $_SESSION['login_attempt_time_expires'] = time() + (60 * 1);
+      $_SESSION['login_attempt_time_expires'] = time() + (60 * 10);
       header("location:login.php?wrongPassword=1&invalidCredentials=1");
       exit();
     endif;
   } catch (Exception $err) {
     $invalidCredentials = true;
     $_SESSION['login_attempt_time'] = $loginAttemptTime + 1;
-    $_SESSION['login_attempt_time_expires'] = time() + (60 * 1);
+    $_SESSION['login_attempt_time_expires'] = time() + (60 * 10);
     header("location:login.phpwrongPassword=1&invalidCredentials=1");
     exit();
   }
@@ -117,7 +117,7 @@ endif;
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required />
         <?= ($wrongPassword or $invalidCredentials) ? '<span class="text-danger">Invalid Credentials</span>' : "" ?>
-        <?= $wait ? '<span class="text-danger">You can try agin in 5 minutes.</span>' : "" ?>
+        <?= $wait ? '<span class="text-danger">You can try again in 10 minutes.</span>' : "" ?>
 
         <?php if ($wait) : ?>
           <button disabled type="submit" id="btnLogin" class="bg-danger text-light pe-none " name="btnLogin">Login</button>
