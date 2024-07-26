@@ -51,8 +51,17 @@ endif;
             <button name="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         
-        <div class="profile ">
-            <img class="wh" src="<?= "images/" . $_SESSION['user']['profileImg'] ?>" alt="" />
+        <div class="profile" onclick="toggleProfileCard()">
+            <img class="rounded-circle" src="<?= 'images/' . $_SESSION['user']['profileImg'] ?>" alt="Profile" width="60" height="60" />
         </div>
+        <div id="profileCard" class="profile-card position-absolute rounded">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                <img class="rounded-circle mb-3" src="<?= 'images/' . $_SESSION['user']['profileImg'] ?>" alt="Profile" width="70" height="70" />
+                <p class="card-text fs-5"><strong><?= $_SESSION['user']['name'] ?></strong></p>
+                <!-- Pass the user ID as a parameter in the URL -->
+                <a href="edit-profile.php?editid=<?= $_SESSION['user']['id'] ?>" class="btn btn-success">Edit Profile</a>
+            </div>
+        </div>
+
     </div>
 </nav>

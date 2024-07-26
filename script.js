@@ -11,3 +11,7 @@ function handleMediaQueryChange(e) {
   mediaQuery.addListener(handleMediaQueryChange);
   handleMediaQueryChange(mediaQuery); // Initial check  
 
+  function toggleProfileCard() {
+    const profileCard = document.getElementById('profileCard');
+    profileCard.style.display = profileCard.style.display === 'block' ? 'none' : 'block';
+}

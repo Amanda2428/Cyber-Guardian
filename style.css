@@ -285,6 +285,29 @@
     justify-content: center; 
     align-items: center;    
 }
+
+.profile-card {
+  display: none;
+  position: absolute;
+  width: 250px;
+  top: 80px; 
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#profileCard .card-body a{
+  margin-left: 0px;
+}
+
+.profile-card a {
+  color: white;
+  text-decoration: none;
+}
+  
   .wh {
     width: 50px;
     height: 50px;
@@ -628,6 +651,7 @@ a:hover {
 .so-apps li:hover img {
   opacity: 0.5;
 }
+
 
 .headcolor{
  color: #114578;

@@ -41,7 +41,7 @@ if (isset($_POST['btnLogin'])) :
   } catch (Exception $err) {
     $invalidCredentials = true;
     $_SESSION['login_attempt_time'] = $loginAttemptTime + 1;
-    $_SESSION['login_attempt_time_expires'] = time() + (60 * 10);
+    $_SESSION['login_attempt_time_expires'] = time() + (60 * 10); 
     header("location:login.phpwrongPassword=1&invalidCredentials=1");
     exit();
   }

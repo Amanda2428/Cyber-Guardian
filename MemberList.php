@@ -56,7 +56,7 @@ endif;
       <input class="form-control mr-sm-2 w-100" name="keyword" type="search" placeholder="Search..." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" name="btnSearch" type="submit">Search</button>
     </form>
-    <p class="mt-4">Guiding teenagers to explore the digital world securely.</p>
+    <p class="mt-4"><strong>Search here with Email</strong></p>
     <?php if(isset($_GET['btnSearch'])) : ?>
   <p>Search result on: <span class="fw-bold"><?= $keyword ?></span></p>
   <a href="MemberList.php" class="btn btn-danger ms-2 text-decoration-none">
@@ -82,6 +82,7 @@ endif;
               <th>City</th>
               <th>Newsletter Subscription</th>
               <th>User Type</th>
+              <th>Profile</th>
               <th>Action</th>
             </tr>
             <?php
@@ -95,6 +96,7 @@ endif;
                 <td><?php echo $row['city']; ?></td>
                 <td><?php echo $row['subscription'] == 1 ? "Yes" : "No"; ?></td>
                 <td><?php echo $row['usertype'] == 1 ? "Admin" : "User"; ?></td>
+                <td><img src="<?php echo "images\\" . $row['profileImg']; ?>" class="responsive-img" alt=""></td>
                 <td class="promote h-100">
                   <?php if ($row['usertype'] == 1) : ?>
                     <a href="MemberList.php?changeRole=1&userId=<?= $row['id'] ?>&roleToChange=0 " class="btn btn-primary btn-sm mt-1 mb-2  w-100">Demote to User</a>
