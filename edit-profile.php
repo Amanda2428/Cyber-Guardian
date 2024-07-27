@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();    
+session_start();
 include("dbconnect.php");
 
 // Check if editid is provided
@@ -16,7 +16,7 @@ if (isset($_POST['btnSave'])) {
     $email = $conn->real_escape_string($_POST['email']);
     $password = $conn->real_escape_string($_POST['password']);
     $city = $conn->real_escape_string($_POST['city']);
-    
+
     $Filename = $_FILES["image"]["name"] ?? null;
     $Filepath = $_FILES["image"]["tmp_name"] ?? null;
 
@@ -53,6 +53,7 @@ if (!$row) {
     die("No record found for ID: $eid");
 }
 ?>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -76,38 +77,35 @@ if (!$row) {
     </header>
 
     <main>
-    <section id="contact" class="shadow back-color">
-      <h2><strong>Edit Profile</strong></h2>
+        <section id="contact" class="shadow back-color">
+            <h2><strong>Edit Profile</strong></h2>
 
-      <form action="edit-profile.php?editid=<?php echo $eid; ?>" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($row['name']); ?>" required />
+            <form action="edit-profile.php?editid=<?php echo $eid; ?>" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($row['name']); ?>" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($row['email']); ?>" required />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($row['password']); ?>" required />
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($row['password']); ?>" required />
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="<?php echo htmlspecialchars($row['city']); ?>" required />
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" value="<?php echo htmlspecialchars($row['city']); ?>" required />
+                <label for="image" class="form-label">Image:</label>
+                <input class="form-control" type="file" id="image" name="image" />
 
-        <label for="image" class="form-label">Image:</label>
-        <input class="form-control" type="file" id="image" name="image" />
+                <label for="col" class="form-label">Previous Image:</label>
+                <img src="<?php echo "images/" . htmlspecialchars($row['profileImg']); ?>" width="100%" height="300px" alt="">
 
-        <label for="col" class="form-label">Previous Image:</label>
-        <img src="<?php echo "images/" . htmlspecialchars($row['profileImg']); ?>" width="100%" height="300px" alt="">
+                <button type="submit" name="btnSave" class="btn btn-primary">Save</button>
+            </form>
 
-        <button type="submit" name="btnSave" class="btn btn-primary">Save</button>
-      </form>
-
-      <p>
-        Before sending a message, please review our
-        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
-      </p>
-    </section>
-  </main>
+            <p>
+                Before sending a message, please review our
+                <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+            </p>
+        </section>
+    </main>
 
     <!-- Footer start -->
     <?php include("userfooter.php"); ?>
@@ -123,4 +121,5 @@ if (!$row) {
     </script>
     <script src="script.js"></script>
 </body>
+
 </html>

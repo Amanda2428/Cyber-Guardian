@@ -61,6 +61,5 @@ endif;
                 <a href="edit-profile.php?editid=<?= $_SESSION['user']['id'] ?>" class="btn btn-success">Edit Profile</a>
             </div>
         </div>
-<p>hi</p>
     </div>
 </nav>
