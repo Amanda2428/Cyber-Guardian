@@ -37,7 +37,7 @@ $email = $_SESSION['user']['email'];
           <h2>Top tips for live streaming & vlogging</h2>
           <h5>A parent’s guide to keep children safe</h5>
           <p>If your child wants to live stream or vlog, help them do so safely with our top tips below.</p>
-          <div class="tips-button d-flex flex-start gap-3">
+          <div class="tips-button  gap-4">
             <!-- Download Button -->
             <button class="btn btn-danger download-btn" onclick="window.location.href='pdf/Internet-Matters-Tips-Live-streaming-and-vlogging.pdf'">Download Tips</button>
             <!-- Share Button -->
@@ -238,6 +238,7 @@ $email = $_SESSION['user']['email'];
   <script>
     AOS.init();
   </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -104,6 +104,7 @@ $email = $_SESSION['user']['email'];
     <script>
         AOS.init();
     </script>
+      <script src="script.js"></script>
 </body>
 
 </html>

@@ -34,8 +34,12 @@ $result = $conn->query($sql1);
   <!-- Navbar start -->
   <?php include("usernav.php"); ?>
   <!-- Navbar End -->
-  <header>
-    <h1 class="mt-3"><strong>Most Popular Social Media Apps</strong></h1>
+  <header class="web-service ">
+
+    <h1 class="fs-3 p-3"><strong>How to Prevent Your Child from Dangerous Social Media Apps</strong></h1>
+    <p class="p-3 fs-5">In today's digital age, social media can be a double-edged sword, offering both opportunities for connection and risks of exposure to harmful content. Studies show that a 
+      significant percentage of teenagers encounter cyberbullying and privacy violations online. To protect your child, it's crucial to guide them on safe social media practices. Encourage open conversations about their online experiences and emphasize the importance of privacy settings. By regularly reviewing their social media accounts and teaching them how to block or report inappropriate behavior, you can help them navigate the digital world safely. Explore more about social media privacy and bullying prevention by clicking the links below.</p>
+  
   </header>
 
   <main>
@@ -85,6 +89,7 @@ $result = $conn->query($sql1);
   <script>
     AOS.init();
   </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

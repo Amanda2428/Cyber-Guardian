@@ -168,6 +168,7 @@ $result = $conn->query($sql1);
       grabCursor: true,
     });
   </script>
+    <script src="script.js"></script>
   <!-- <script>
     var swiper2 = new Swiper(".mySwiper2", {
       grabCursor: true,
