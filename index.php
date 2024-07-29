@@ -65,19 +65,19 @@ $resSocial = $conn->query($sql3);
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active object-fit-cover" data-bs-interval="2000">
-          <img src="images/iStock-1028057054.jpg" class="d-block w-100 object-fit-cover" alt="...">
+          <img src="images/slide-1.jpg" class="d-block w-100 object-fit-cover" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="imagest/pic2.jpg" class="d-block w-100" alt="...">
+          <img src="images/slide-2.jpg" class="d-block w-100 object-fit-cover" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="imagest/pic3.jpg" class="d-block w-100" alt="...">
+          <img src="images/slide-3.jpg" class="d-block w-100 object-fit-cover" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="imagest/pic4.jpg" class="d-block w-100" alt="...">
+          <img src="images/slide-4.jpg" class="d-block w-100 object-fit-cover" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="imagest/pic5.jpg" class="d-block w-100" alt="...">
+          <img src="images/slide-5.jpg" class="d-block w-100 object-fit-cover" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -105,7 +105,7 @@ $resSocial = $conn->query($sql3);
         <div class="col-lg-3 d-flex align-items-center justify-content-center">
           <div class="see-more-btn">
             <a href="#newletters">See More</a>
-          </div>
+          </div>  
         </div>
       </div>
     </div>
@@ -135,6 +135,7 @@ $resSocial = $conn->query($sql3);
                   <p class="description custom-truncate "><strong><?php echo $rowSer['description']; ?></strong></p>
                   <p class="description custom-truncate "><strong><?php echo $rowSer['info']; ?></strong></p>
                   <p class="mt-3">Publish Date: <?php echo $rowSer['createdate']; ?></p>
+                  <button type="button" class="btn btn-success "><a href="login.php">For More Details!</a></button>
                 </div>
               </div>
           <?php

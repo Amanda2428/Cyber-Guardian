@@ -20,13 +20,11 @@ $email = $_SESSION['user']['email'];
 include('dbconnect.php');
 // defining of the values
 if (isset($_POST['btnSubmit'])) {
-  $title = $_POST['title'];
-  $des = $_POST['description'];
-  $info = $_POST['info'];
+  $title = $conn->real_escape_string($_POST['title']);
+  $des = $conn->real_escape_string($_POST['description']);
+  $info = $conn->real_escape_string($_POST['info']);
   if (isset($_FILES["simg"]) && $_FILES["simg"]["error"] == 0) {
-    //Read file name
     $Filename = $_FILES["simg"]["name"];
-    //Read file path
     $Filepath = $_FILES["simg"]["tmp_name"];
   }
 

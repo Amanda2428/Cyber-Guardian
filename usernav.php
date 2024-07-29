@@ -25,6 +25,7 @@ endif;
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="popular-apps.php">Popular-app</a></li>
                     <li><a class="dropdown-item" href="parents-help.php">Parents Help</a></li>
+                    <li><a class="dropdown-item" href="services.php">Services</a></li>
                     <li><a class="dropdown-item" href="livestreaming.php">Livestreaming</a></li>
                 </ul>
             </li>
@@ -44,7 +45,7 @@ endif;
             <select name="searchIn" class="form-control w-50" required>
                 <option value="#" disabled selected>↓</option>
                 <option value="home.php?search=1&table=newsletter">Newsletter</option>
-                <option value="home.php?search=1&table=services">Service</option>
+                <option value="services.php?search=1&table=services">Service</option>
                 <option value="popular-apps.php?search=1&table=socialmediaapps">Social-Media Apps</option>
                 <option value="parents-help.php?search=1&table=howparenthelp">Parents Help</option>
             </select>

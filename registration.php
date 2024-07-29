@@ -67,12 +67,6 @@ if (isset($_POST['btnReg'])) {
         </li>
       </ul>
 
-
-      <!-- <form class="form-inline my-2  d-flex flex-row gap-3 mr-20 w-35 form-responsive">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        -->
     </div>
   </nav>
   <header>

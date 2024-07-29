@@ -43,8 +43,8 @@ $result = $conn->query($sql1);
   </header>
 
   <main>
-    <section id="popular-apps">
-      <div class="container text-center mt-5">
+    <section id="popular-apps ">
+      <div class="container text-center mt-5 ">
         <?php if (isset($_GET['search'])) : ?>
           <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
             <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
@@ -55,8 +55,8 @@ $result = $conn->query($sql1);
           if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
           ?>
-              <div class="col-md-4 mb-4">
-                <div class="app-card">
+              <div class="col-md-4 mb-4 ">
+                <div class="app-card ">
                   <img src="<?php echo "images/" . htmlspecialchars($row['logo']); ?>" alt="App Logo" class="app-image">
                   <h3 class="mt-2"><strong><?php echo htmlspecialchars($row['name']); ?></strong></h3>
                   <div class="mt-3  ">

@@ -88,6 +88,9 @@ if (!$row) {
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($row['password']); ?>" required />
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($row['email']); ?>"required />
+
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" value="<?php echo htmlspecialchars($row['city']); ?>" required />
 

@@ -425,6 +425,28 @@
     max-height: 3em;
     font-size: 18px;
 }
+.custom-truncate-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    max-height: 3em;
+    font-size: 18px;
+}
+#main-services .icon-box{
+padding: 100px 20px;
+height: 600px;
+  text-align: center;
+  border: 1px solid #ebe6e4;
+  position: relative;
+  border-radius: 20px;
+  background: white;
+}
+#main-services .icon{
+  width: 100px;
+  height: 100px;
+}
+
 .br-20{
   border-radius: 20px;
 }
@@ -545,6 +567,7 @@ a:hover {
 #services .container .title a{
   color: #0E5640;
 }
+
 .icon {
   position: absolute;
   top: -36px;
@@ -584,6 +607,10 @@ a:hover {
   border: 2px solid white;
   font-size: 30px;
 }
+#services .btn-success a{
+  text-decoration: none;
+  color: white;
+}
 
 .title a {
   text-decoration: none;
@@ -597,60 +624,60 @@ a:hover {
   color: #0E5640;
 }
 
-.so-apps ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+  .so-apps ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
 
-.so-apps li {
-  flex: 1 0 16%; 
-  margin: 10px;
-  border-radius: 8px;
-  padding: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 130px;
-  max-width: 130px; 
-}
+  .so-apps li {
+    flex: 1 0 16%; 
+    margin: 10px;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 130px;
+    max-width: 130px; 
+  }
 
-.so-apps li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+  .so-apps li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 
-.so-apps li img {
-  width: 100%;
-  height: 100%;
-    border-radius: 10px;
-    padding-left: 0;
-}
+  .so-apps li img {
+    width: 100%;
+    height: 100%;
+      border-radius: 10px;
+      padding-left: 0;
+  }
 
 
-.so-apps li .app-name {
-  font-size: 18px;
-  color: #000000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7); 
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  z-index: 1;
-}
+  .so-apps li .app-name {
+    font-size: 18px;
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 1;
+  }
 
-.so-apps li:hover img {
-  opacity: 0.5;
-}
+  .so-apps li:hover img {
+    opacity: 0.5;
+  }
 
 
 .headcolor{
@@ -1200,6 +1227,23 @@ font-size: 20px;
 
   .swiper-slide {
     font-size: 16px;
+  }
+}
+@media (min-width: 576px) {
+  .app-item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-item {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-item {
+    width: 25%;
   }
 }
 
