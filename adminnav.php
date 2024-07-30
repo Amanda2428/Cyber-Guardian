@@ -39,6 +39,7 @@
       <div class="card-body d-flex flex-column align-items-center justify-content-center">
         <img class="rounded-circle mb-3" src="<?= 'images/' . $_SESSION['user']['profileImg'] ?>" alt="Profile" width="70" height="70" />
         <p class="card-text fs-5"><strong><?= $_SESSION['user']['name'] ?></strong></p>
+        <p class="card-text "><?= $_SESSION['user']['email'] ?></p>
         <a href="edit-profile.php?editid=<?= $_SESSION['user']['id'] ?>" class="btn btn-success">Edit Profile</a>
       </div>
     </div>

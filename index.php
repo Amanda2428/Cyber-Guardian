@@ -107,13 +107,9 @@ $resSocial = $conn->query($sql3);
         </div>
       </div>
     </div>
-
   </header>
 
   <main>
-
-
-
     <section id="services">
       <div class="container text-center">
         <h1 class="text-center mb-5"><strong>Our Services Are Here!</strong></h1>
@@ -286,8 +282,6 @@ $resSocial = $conn->query($sql3);
         </div>
       </div>
     </section>
-
-
   </main>
   <!-- Footer Start -->
   <?php include("defaultfooter.php") ?>

@@ -14,29 +14,7 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-<?php
-include('dbconnect.php');
-session_start();
-$email = $_SESSION['user']['email'];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['message'])) {
-        $message = $_POST['message'];
-
-        // Insert Query
-        $sql = "INSERT INTO contactus (message, email) VALUES (?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ss', $message, $email);
-
-        if ($stmt->execute()) {
-            $status = "success";
-        } else {
-            $status = "error";
-        }
-        $stmt->close();
-    }
-}
-?>
 <body>
   <!-- Navbar start -->
   <?php include("usernav.php"); ?>
