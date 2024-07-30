@@ -54,26 +54,26 @@ if (isset($_GET['id'])) {
                     <div class="blog-1">
                         <?php if (isset($newsItem)) : ?>
                             <div class="card">
-                            <div class="card-img-top">
-                            <img src="images/<?php echo $newsItem['newsimg']; ?>" class="" alt="News Image">
+                                <div class="card-img-top">
+                                    <img src="images/<?php echo $newsItem['newsimg']; ?>" class="" alt="News Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title single-head"><b>Title။ ။ <?php echo $newsItem['title']; ?></b></h5>
+                                    <p class="card-text single-text ">
+                                        <b>Content။ ။ </b><?php echo $newsItem['content']; ?>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title single-head"><b>Title။ ။ <?php echo $newsItem['title']; ?></b></h5>
-                                <p class="card-text single-text ">
-                                    <b>Content။ ။ </b><?php echo $newsItem['content']; ?>
-                                </p>
-                            </div>
-                        </div>
                         <?php else : ?>
                             <p>No news item to display.</p>
                         <?php endif; ?>
-                    <div class="d-flex gap-3 align-items-center ">
-                    <h5 class="m-0">Please Click To more see Newsletter </h5>
-                    <button type="button" class="btn btn-success "><a href="home.php" class="text-decoration-none text-light">See More</a></button>
+                        <div class="d-flex gap-3 align-items-center ">
+                            <h5 class="m-0">Please Click To more see Newsletter </h5>
+                            <button type="button" class="btn btn-success "><a href="home.php" class="text-decoration-none text-light">See More</a></button>
+                        </div>
+
                     </div>
-                       
-                    </div>
-                    
+
                     <div class="blog-2 col-lg-4">
 
                         <h3 class="sidebar-title">Recent Posts</h3>
@@ -98,9 +98,9 @@ if (isset($_GET['id'])) {
                             }
                             ?>
                         </div>
-                  
+
                     </div>
-                   
+
                 </div>
             </div>
         </section>
@@ -118,6 +118,7 @@ if (isset($_GET['id'])) {
     <script>
         AOS.init();
     </script>
+    <!-- Internal Script -->
     <script src="script.js"></script>
 </body>
 

@@ -168,23 +168,9 @@ $result = $conn->query($sql1);
       grabCursor: true,
     });
   </script>
+    <!-- Internal Script -->
     <script src="script.js"></script>
-  <!-- <script>
-    var swiper2 = new Swiper(".mySwiper2", {
-      grabCursor: true,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: ["-120%", 0, -500],
-        },
-        next: {
-          shadow: true,
-          translate: ["120%", 0, -500],
-        },
-      },
-    });
-  </script> -->
+  
 </body>
 
 </html>

@@ -86,7 +86,7 @@ if (isset($_POST['btnSubmit'])) {
   <script>
     AOS.init();
   </script>
-  <!-- Link to the external JavaScript file -->
+  <!--External JavaScript file -->
   <script src="script.js"></script>
 </body>
 

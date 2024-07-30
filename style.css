@@ -238,7 +238,6 @@
     right: 0;
     top: 0;
     width: 100%;
-    /* object-fit: cover;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,14 +421,7 @@
     max-height: 3em;
     font-size: 18px;
 }
-.custom-truncate-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    max-height: 3em;
-    font-size: 18px;
-}
+
 #main-services .icon-box{
 padding: 100px 20px;
 height: 600px;

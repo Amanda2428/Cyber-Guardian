@@ -299,7 +299,8 @@ $resSocial = $conn->query($sql3);
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- Bootstrap 5 JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+    <!-- Internal Script -->
+    <script src="script.js"></script>
   <script>
     AOS.init();
   </script>

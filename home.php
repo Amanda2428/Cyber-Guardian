@@ -330,6 +330,7 @@
   <script>
     AOS.init();
   </script>
+  <!-- Internal Script -->
   <script src="script.js"></script>
 </body>
 
