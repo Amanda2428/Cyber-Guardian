@@ -13,7 +13,6 @@
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-
                     <ul>
                         <h4 class="news"><strong>All Content</strong></h4>
                         <li>
@@ -35,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 color-gray">
-                    <h4></h4>
+                
                     <br />
                     <ul>
                         <li>
