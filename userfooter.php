@@ -37,6 +37,10 @@
                 
                     <br />
                     <ul>
+                    <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a href="services.php">Services</a>
+                        </li>
                         <li>
                             <i class="fa-solid fa-chevron-right"></i>
                             <a href="livestreaming.php">Livestreaming</a>
