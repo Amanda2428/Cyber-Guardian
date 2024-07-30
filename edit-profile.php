@@ -4,6 +4,8 @@
 session_start();
 include("dbconnect.php");
 
+$email = $_SESSION['user']['email'];
+
 // Check if editid is provided
 if (!isset($_GET['editid']) || empty($_GET['editid'])) {
     die("No ID specified.");
