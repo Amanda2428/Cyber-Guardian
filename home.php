@@ -111,10 +111,8 @@
         <div class="see-text col-lg-9 text-center">
           <h2 class="mb-4 "><strong>Welcome to <span class="headcolor">Our Campaign !</span></strong></h2>
           <p>
-            Empowering teenagers to navigate the digital world safely.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas et labore, eos recusandae
-            laudantium explicabo eveniet sint ducimus reprehenderit adipisci perspiciatis reiciendis odit
-            officiis. Eaque ipsam doloribus sapiente repudiandae consectetur.
+            We're dedicated to empowering teenagers to navigate the digital world safely. Our mission is to equip you with essential tools and knowledge to protect yourself online and make informed decisions.
+            Explore our resources and join us in creating a safer digital environment for everyone.
           </p>
         </div>
         <div class="col-lg-3 d-flex align-items-center justify-content-center">
@@ -140,7 +138,7 @@
           ?>
 
               <div class="col-lg-4 col-md-6 mb-5">
-                <div class="icon-box d-flex flex-column align-content-center justify-content-center" >
+                <div class="icon-box d-flex flex-column align-content-center justify-content-center">
                   <div class="icon"><img src="<?php echo "images\\" . $rowSer['serviceImg']; ?>" alt="" class="rounded-circle"></div>
                   <h4 class="title mt-2">
                     <a href="#" class=""><b><?php echo $rowSer['title']; ?></b></a>
@@ -228,10 +226,10 @@
             }
           } else {
             ?>
-            <form action="#" method="POST" class="web-service " >
+            <form action="#" method="POST" class="web-service ">
               <label for="name "><strong>Newsletter Subscription:</strong></label>
-              <input class="form-check-input ms-2" type="radio" name="sub" id="yes"value="1"  required />Yes
-              <input class="form-check-input ms-2" type="radio" name="sub" id="no"value="0"  required />No
+              <input class="form-check-input ms-2" type="radio" name="sub" id="yes" value="1" required />Yes
+              <input class="form-check-input ms-2" type="radio" name="sub" id="no" value="0" required />No
 
               <br><br>
               <button type="submit" name="btnSub" class="btn btn-success">Subscribe</button>
@@ -258,10 +256,10 @@
 
             <li>
               <a href="popular-apps.php">
-              <img src="<?php echo "images\\" . $rowSoc['logo']; ?>">
-              <div class="app-name"><?php echo $rowSoc['name']; ?></div>
+                <img src="<?php echo "images\\" . $rowSoc['logo']; ?>">
+                <div class="app-name"><?php echo $rowSoc['name']; ?></div>
               </a>
-          
+
             </li>
           <?php
           }
@@ -277,6 +275,48 @@
       </ul>
     </section>
 
+    <section id="teen-brain">
+      <hr>
+      <h1 class="m-5 text-center ">Teenage <strong class="headcolor">Vs</strong> Social Media</h1>
+      <hr>
+      <div class="card-group mt-5 p-4">
+        <div class="card">
+          <img class="card-img-top" src="images/Teenage-brain.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Impact on Teenage Brain Development</strong></h5>
+            <p class="card-text ">The teenage brain is particularly sensitive to social media influences due to its ongoing development in areas related to impulse control, decision-making, and emotional regulation. Social media platforms, with their instant rewards and feedback mechanisms, can stimulate the brain's reward system, sometimes leading to addictive behaviors and changes in attention span. This heightened sensitivity can affect how teenagers process rewards and consequences,
+              making them more susceptible to the immediate gratification provided by likes, comments, and shares.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><strong>Created Date:</strong> April 29, 2024 </small>
+          </div>
+        </div>
+        <div class="card ">
+          <img class="card-img-top" src="images/body.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Effects on Self-Esteem and Body Image</strong></h5>
+            <p class="card-text">Social media can significantly impact teenagers' self-esteem and body image. The constant exposure to curated and often unrealistic images can lead to unfavorable comparisons and negative self-perception. Teenagers may feel pressured to meet idealized standards of beauty and success, which can affect their mental health and overall self-worth. It's crucial to foster a healthy self-image by promoting positive and realistic
+              representations and encouraging critical thinking about the content consumed online.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><strong>Created Date:</strong>June 1, 2024</small>
+          </div>
+        </div>
+        <div class="card ">
+          <img class="card-img-top" src="images/social-media-risk.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><strong> Managing Social Media Use and Risks</strong></h5>
+            <p class="card-text">Effective management of social media use is essential to mitigate its risks and enhance its benefits. Setting time limits on social media use and encouraging participation in offline activities can help prevent addiction and ensure a balanced lifestyle. Promoting privacy education and awareness about cyberbullying can protect teenagers from potential online threats. By establishing healthy online habits and maintaining open communication about digital experiences,
+              both teenagers and their parents can navigate the social media landscape more safely and effectively.</p>
+
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><strong>Created Date:</strong> July 30, 2024</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <!-- Footer start -->
   <?php include("userfooter.php") ?>
@@ -290,7 +330,7 @@
   <script>
     AOS.init();
   </script>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

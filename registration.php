@@ -100,11 +100,11 @@ if (isset($_POST['btnReg'])) {
         <div class="radio d-flex align-items-center justify-content-center gap-5 mt-2">
           <label for="Radio">Newsletter Subscription:</label>
           <div class="form-check form-check-inline ">
-            <input class="form-check-input" type="radio" name="sub" id="Radio" value="option1">
+            <input class="form-check-input" type="radio" name="sub" id="Radio" value="1">
             <label class="form-check-label" for="sub">Yes</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sub" id="Radio" value="option2">
+            <input class="form-check-input" type="radio" name="sub" id="Radio" value="0">
             <label class="form-check-label" for="sub">No</label>
           </div>
         </div>
