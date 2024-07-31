@@ -249,13 +249,11 @@
           }
           while ($rowSoc = $resSocial->fetch_assoc()) {
         ?>
-
             <li>
               <a href="popular-apps.php">
                 <img src="<?php echo "images\\" . $rowSoc['logo']; ?>">
                 <div class="app-name"><?php echo $rowSoc['name']; ?></div>
               </a>
-
             </li>
           <?php
           }
