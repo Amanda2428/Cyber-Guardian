@@ -59,7 +59,7 @@ endif;
     <p class="mt-4"><strong>Search here with Email</strong></p>
     <?php if(isset($_GET['btnSearch'])) : ?>
   <p>Search result on: <span class="fw-bold"><?= $keyword ?></span></p>
-  <a href="MemberList.php" class="btn btn-danger ms-2 text-decoration-none">
+  <a href="MemberList.php" class="btn btn-primary ms-2 text-decoration-none">
     Clear Search
   </a>
 <?php endif; ?>
