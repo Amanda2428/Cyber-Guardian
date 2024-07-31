@@ -132,7 +132,7 @@
           <?php
           if ($resService->num_rows > 0) {
             if (isset($_GET['search']) and $_GET['table'] == 'services') {
-              echo '<button type="button" class="btn btn-warning mb-5"><a href="home.php">Clear Search</a></button>';
+              echo '<button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>';
             }
             while ($rowSer = $resService->fetch_assoc()) {
           ?>
@@ -155,9 +155,7 @@
           } else {
             ?>
             <h2><?= (isset($_GET['search']) and $_GET['table'] == 'services') ? "Nothing found on : " . htmlspecialchars($_GET['keyword']) : "No services yet.." ?></h2>
-            <button class="btn btn-danger mb-5">
-              <a href="home.php">Clear Search</a>
-            </button>
+            <button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>
           <?php
           }
           ?>
@@ -201,7 +199,7 @@
             <?php
             if ($resNews->num_rows > 0) {
               if (isset($_GET['search']) and $_GET['table'] == 'newsletter') {
-                echo '<button type="button" class="btn btn-warning mb-5"><a href="home.php">Clear Search</a></button>';
+                echo '<button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>';
               }
               while ($rowNews = $resNews->fetch_assoc()) {
             ?>
@@ -219,9 +217,7 @@
             } else {
               ?>
               <h2><?= (isset($_GET['search']) and $_GET['table'] == 'newsletter') ? "Nothing found on: " . htmlspecialchars($_GET['keyword']) : "No newsletters yet.." ?></h2>
-              <button>
-                <a href="home.php" class="">Clear Search</a>
-              </button>
+              <button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>
             <?php
             }
           } else {
@@ -249,7 +245,7 @@
         <?php
         if ($resSocial->num_rows > 0) {
           if (isset($_GET['search']) and $_GET['table'] == 'socialmediaapps') {
-            echo '<button type="button" class="btn btn-warning mb-5"><a href="home.php">Clear Search</a></button>';
+            echo '<button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>';
           }
           while ($rowSoc = $resSocial->fetch_assoc()) {
         ?>
@@ -266,9 +262,7 @@
         } else {
           ?>
           <h2><?= (isset($_GET['search']) and $_GET['table'] == 'socialmediaapps') ? "Nothing found on: " . htmlspecialchars($_GET['keyword']) : "No social media apps listed yet.." ?></h2>
-          <button class="btn btn-danger mb-5">
-            <a href="home.php">Clear Search</a>
-          </button>
+          <button type="button" class="btn btn-primary button mb-5 "><a href="home.php" class="text-decoration-none text-light">Clear Search</a></button>
         <?php
         }
         ?>

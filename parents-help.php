@@ -57,10 +57,12 @@ $result = $conn->query($sql1);
 
     </section>
     <section id="parents-help">
-      <div class="container mb-5">
+      <div class="container mb-5 ">
         <?php if (isset($_GET['search'])) : ?>
-          <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
-          <a href="parents-help.php" class="btn btn-primary button">Clear Search</a>
+          <div class="text-center">
+            <h3>Search result for: <?= htmlspecialchars($keyword) ?></h3>
+            <a href="parents-help.php" class="btn btn-primary button ">Clear Search</a>
+          </div>
         <?php endif; ?>
         <?php
         if ($result->num_rows > 0) {
@@ -98,9 +100,9 @@ $result = $conn->query($sql1);
           }
         } else {
           if (isset($_GET['search'])) {
-            echo "<p>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
+            echo "<p class='text-center mt-3 fs-5'>Nothing found for " . htmlspecialchars($keyword) . ".</p>";
           } else {
-            echo "<p>No results.</p>";
+            echo "<p class='text-center mt-3 fs-5'>No results.</p>";
           }
         }
         ?>
@@ -108,42 +110,42 @@ $result = $conn->query($sql1);
       </div>
     </section>
     <section id="parents-help">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 mb-4 ">
-        <div class="web-service">
-        <h2><strong>How Parents Can Help</strong></h2>
-        <p>Discover top tips for parents to support healthy teen use of social media.</p>
-        <ul  class="arrow-list ">
-          <li>Stay involved and communicate openly with your teenager.</li>
-          <li>Set boundaries and establish clear rules for social media use.</li>
-          <li>Teach the importance of privacy settings and online etiquette.</li>
-          <li>Monitor your teen's online activities without invading their privacy.</li>
-          <li>Encourage a healthy balance between online and offline activities.</li>
-          <li>Discuss the potential impacts of social media on mental health.</li>
-          <li>Explore apps and tools that promote safe social media usage.</li>
-          <li>Keep informed about the latest trends and challenges in social media.</li>
-        </ul>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 mb-4 ">
+            <div class="web-service">
+              <h2><strong>How Parents Can Help</strong></h2>
+              <p>Discover top tips for parents to support healthy teen use of social media.</p>
+              <ul class="arrow-list ">
+                <li>Stay involved and communicate openly with your teenager.</li>
+                <li>Set boundaries and establish clear rules for social media use.</li>
+                <li>Teach the importance of privacy settings and online etiquette.</li>
+                <li>Monitor your teen's online activities without invading their privacy.</li>
+                <li>Encourage a healthy balance between online and offline activities.</li>
+                <li>Discuss the potential impacts of social media on mental health.</li>
+                <li>Explore apps and tools that promote safe social media usage.</li>
+                <li>Keep informed about the latest trends and challenges in social media.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 ">
+            <div class="web-service">
+              <h2><strong>If Your Child Is Cyberbullied</strong></h2>
+              <p>Steps to take when dealing with cyberbullying.</p>
+              <ul class="arrow-list ">
+                <li><strong>Stay Calm and Listen:</strong> Approach the situation calmly and listen to your child without judgment.</li>
+                <li><strong>Document Everything:</strong> Save and document all evidence of cyberbullying, including screenshots of messages and posts.</li>
+                <li><strong>Report the Cyberbullying:</strong> Report the behavior to the platform or service where the bullying is occurring.</li>
+                <li><strong>Educate About Privacy Settings:</strong> Teach your child how to use privacy settings effectively.</li>
+                <li><strong>Encourage Safe Online Practices:</strong> Guide your child in practicing safe online behavior.</li>
+                <li><strong>Seek Professional Help: </strong>Consider consulting a mental health professional if necessary.</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="col-md-6 mb-4 ">
-        <div class="web-service">
-        <h2><strong>If Your Child Is Cyberbullied</strong></h2>
-        <p>Steps to take when dealing with cyberbullying.</p>
-        <ul class="arrow-list ">
-          <li><strong>Stay Calm and Listen:</strong> Approach the situation calmly and listen to your child without judgment.</li>
-          <li><strong>Document Everything:</strong> Save and document all evidence of cyberbullying, including screenshots of messages and posts.</li>
-          <li><strong>Report the Cyberbullying:</strong> Report the behavior to the platform or service where the bullying is occurring.</li>
-          <li><strong>Educate About Privacy Settings:</strong> Teach your child how to use privacy settings effectively.</li>
-          <li><strong>Encourage Safe Online Practices:</strong> Guide your child in practicing safe online behavior.</li>
-          <li><strong>Seek Professional Help: </strong>Consider consulting a mental health professional if necessary.</li>
-        </ul>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -168,9 +170,9 @@ $result = $conn->query($sql1);
       grabCursor: true,
     });
   </script>
-    <!-- Internal Script -->
-    <script src="script.js"></script>
-  
+  <!-- Internal Script -->
+  <script src="script.js"></script>
+
 </body>
 
 </html>

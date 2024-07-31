@@ -50,7 +50,7 @@ $result = $conn->query($sql1);
             <a href="popular-apps.php" class="btn btn-primary button">Clear Search</a>
         <?php endif; ?>
         
-        <div class="row" data-aos="fade-up">
+        <div class="row d-flex align-items-center justify-content-center" data-aos="fade-up">
           <?php
           if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
